@@ -1,0 +1,61 @@
+@import "../variables.less";
+.wikitable {
+    background-color: @bg-interactive;
+    color: @text-base;
+    margin: 1em 0;
+    border: 1px solid @accent-alt;
+}
+.wikitable > tr > th, .wikitable > * > tr > th {
+    background-color: @bg-main;
+    color: @text-subtle;
+    text-align: center;
+}
+
+.ext-replacetext-searchoptions {
+    clear: both;
+    padding: 0.5em 0.75em 0.75em 0.75em;
+    background-color: @bg-light;
+    margin: -1px 0 0;
+    border: 1px solid @accent-alt;
+    border-radius: 0 0 2px 2px;
+}
+table.mw-datatable  {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1em;
+    border: 1px solid @accent-alt;
+    border-radius: 8px;
+    background-color: @bg-interactive;
+    color: @text-base;
+    border-collapse: collapse;
+    tbody {
+        tr {
+            border-bottom: 1px solid @accent-alt;
+            &:last-child {
+                border-bottom: none;
+            }
+            th, td {
+                padding: 0.5em 0.75em;
+                vertical-align: top;
+                border: 1px solid @accent-alt;
+            }
+            th {
+                background-color: @bg-panel;
+                color: @text-subtle;
+                text-align: left;
+            }
+            td {
+                background-color: @bg-interactive !important;
+            }
+        }
+    }
+    thead {
+        tr {
+            th {
+                background-color: @bg-main !important;
+                color: @text-subtle;
+                text-align: center;
+            }
+        }
+    }
+}

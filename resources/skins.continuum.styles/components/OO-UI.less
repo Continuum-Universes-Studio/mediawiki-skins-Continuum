@@ -1,0 +1,257 @@
+@import '../variables.less';
+.oo-ui-menuLayout-menu {
+    border-radius: 12px;
+    border: 2px solid @accent-primary;
+    background-color: @bg-alt;
+    box-shadow: 0 2px 4px @shadow-color;
+}
+/*
+.oo-ui-widget-enabled {
+    background-color: @bg-button;
+    color: var(--color-white);
+    border: 1px solid @accent-alt;
+    border-radius: 8px;
+    font-family: @font-code;
+    
+    .oo-ui-menuOptionWidget {
+       color: @accent-primary;
+    }
+    .oo-ui-menuOptionWidget:hover {
+        background-color: @accent-primary;
+        color: @accent-hover;
+    }
+}
+
+.oo-ui-widget {
+    background-color: @bg-alt;
+    color: var(--color-white);
+    border: 1px solid @accent-alt;
+    border-radius: 8px;
+}
+*/
+.oo-ui-tabSelectWidget-framed {
+    background-color: @bg-interactive !important;
+    
+    .oo-ui-tabOptionWidget.oo-ui-optionWidget-selected {
+        background-color: @accent-primary !important;
+        color: var(--color-white) !important;
+        border-color: @accent-alt !important;
+    }
+}
+.oo-ui-fieldsetLayout-group {
+    background-color: @bg-alt;
+    border: 1px solid @accent-primary;
+    border-radius: 12px;
+    //padding: 16px;
+    margin-bottom: 16px;
+}
+.oo-ui-radioInputWidget [type='radio'] + span {
+    background-color: @bg-panel;
+    position: absolute;
+    left: 0;
+    box-sizing: border-box;
+    width: 1.42857143em;
+    height: 1.42857143em;
+    border-color: @accent-alt;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 1px;
+}
+.oo-ui-radioInputWidget.oo-ui-widget-enabled 
+[type='radio']:checked + span {
+    border-color: @bg-button;
+}
+.oo-ui-dropdownWidget {
+    .oo-ui-dropdownWidget-handle {
+        background-color: @bg-alt;
+        color: var(--color-white);
+        border: 1px solid @accent-alt;
+        border-radius: 8px;
+    }
+    .oo-ui-dropdownWidget-handle:hover {
+        background-color: @accent-primary;
+        color: var(--color-white);
+        border-color: @accent-alt;
+    }
+}
+.oo-ui-dropdownWidget.oo-ui-widget-enabled {
+    .oo-ui-dropdownWidget-handle {
+        background-color: @bg-panel;
+        color: @text-base;
+        transition-property: background-color, border-color, box-shadow;
+        transition-duration: 100ms;
+    }
+    .oo-ui-dropdownWidget-handle:hover {
+        background-color: @accent-primary;
+        color: @text-base;
+        border-color: @accent-alt;
+    }
+}
+.oo-ui-dropdownWidget.oo-ui-widget-enabled {
+    .oo-ui-dropdownWidget-menu {
+        background-color: @bg-alt;
+        border: 2px solid @accent-primary;
+        border-radius: 12px;
+        box-shadow: 0 2px 4px @shadow-color;
+    }
+    .oo-ui-dropdownWidget-menu .oo-ui-menuOptionWidget:hover {
+        background-color: @accent-primary;
+        color: @text-base;
+        border-radius: 8px;
+    }
+
+}
+.oo-ui-menuOptionWidget:hover {
+    border-radius: 8px;
+}
+.oo-ui-optionWidget-selected {
+        background: @accent-alt !important;
+        color: @text-base;
+        border-radius: 8px;
+    .oo-ui-optionWidget-highlighted {
+            background-color: @accent-hover !important;
+            color: @text-base;
+            border-radius: 8px;
+    }
+}
+.oo-ui-optionWidget-highlighted {
+        background-color: @accent-primary !important;
+        color: @text-base;
+        border-radius: 8px;
+}
+.oo-ui-tool:hover {
+    background-color: @accent-primary !important;
+    color: @color-white;
+    border-radius: 8px;
+}
+.oo-ui-tool.oo-ui-widget-enabled.oo-ui-tool-active > .oo-ui-tool-link {
+    background-color: @icon-color !important;
+    color: @color-white;
+    border-radius: 8px;
+}
+.oo-ui-dropdownWidget.oo-ui-widget-enabled.oo-ui-dropdownWidget-open .oo-ui-dropdownWidget-handle {
+    background-color: @accent-alt !important;
+}
+.oo-ui-processDialog-location, .oo-ui-panelLayout {
+    background-color: @bg-main;
+    border: 2px solid @accent-primary;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px @shadow-color;
+}
+.ve-ui-mwParameterPage-label 
+{
+    color: @text-base;
+}
+.oo-ui-textInputWidget .oo-ui-inputWidget-input {
+    background-color: @bg-panel !important;
+    color: @text-subtle !important;
+    margin: 0;
+    border: 1px solid @accent-alt !important;
+}
+.ve-ui-mwParameterPage-info {
+    border: none;
+}
+/* Put this in your skins.continuum.styles / visual editor less file */
+.skin-continuum {
+  /* provide a CSS variable so themes can override */
+  --ve-toolbar-bg:   rgba(255,255,255,0.06);
+  --ve-toolbar-border: rgba(0,0,0,0.12);
+  --ve-toolbar-hover: rgba(255,255,255,0.10);
+
+  /* Broad OOUI/VE toolbar widget rule (applies to buttons, tool groups, panels) */
+  .ve-ui-toolbar-group-pageMenu,
+  .ve-ui-toolbar-group-editMode,
+  .ve-ui-toolbar-group-help,
+  .ve-ui-toolbar-group-insert,
+  .ve-ui-toolbar-group-format,
+  .ve-ui-toolbar-group-advanced,
+  .ve-ui-toolbar-group-history,
+  .ve-ui-toolbar-group-structure,
+  .ve-ui-toolbar-group-layout,
+  .ve-ui-toolbar-group-annotate,
+  .ve-ui-toolbar-group-others,
+  .ve-ui-toolbar-group-cite,
+  .ve-ui-toolbar-group-style,
+  .oo-ui-tool-link, .tab-characters,
+  .tab-advanced, .tab-help,
+  .oo-ui-popupToolGroup-handle{
+    background: @ve-toolbar-bg;
+    border-color: @ve-toolbar-border;
+    box-shadow: none;                  /* optional: remove default OOUI shadow */
+    transition: background-color .12s ease, box-shadow .12s ease;
+  }
+
+  /* Hover / active states for buttons */
+  .ve-ui-toolbar .oo-ui-buttonElement:hover,
+  .ve-ui-toolbar .oo-ui-tool:hover,
+  .ve-ui-panel .oo-ui-buttonElement:hover {
+    background: @ve-toolbar-hover;
+  }
+
+  .ve-ui-toolbar .oo-ui-buttonElement:active,
+  .ve-ui-toolbar .oo-ui-tool:active {
+    /* a slightly darker pressed state */
+    background: @ve-toolbar-background-active;
+  }
+
+  /* Ensure popup contents match */
+  /*
+  .oo-ui-popupWidget .oo-ui-widget {
+    background: @ve-toolbar-bg;
+  }
+    */
+}
+.ve-ui-mwSaveDialog-options, .oo-ui-processDialog-actions-other {
+    background-color: @bg-alt !important;
+    border-top: 1px solid @accent-primary;
+}
+
+#editpage-copywarn
+{
+    color: @text-subtle;
+}
+.mw-rcfilters-container .mw-rcfilters-ui-filterTagMultiselectWidget.oo-ui-widget-enabled .oo-ui-tagMultiselectWidget-handle {
+    background-color: @bg-alt !important;
+    border: 1px solid @accent-alt !important;
+    border-bottom: 0;
+    border-radius: 2px 2px 0 0;
+    padding: 0 0.6em 0.6em 0.6em;
+    line-height: normal;
+}
+.mw-rcfilters-ui-changesListWrapperWidget .mw-changeslist-legend {
+    background-color: @bg-light !important;
+    position: relative;
+    z-index: 1;
+    border: 1px solid @accent-alt!important;
+}
+.oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-outlined .oo-ui-tagItemWidget.oo-ui-widget-enabled {
+    background-color: @bg-light !important;
+}
+.oo-ui-tagMultiselectWidget-handle {
+    box-sizing: border-box;
+    min-height: 32px;
+    margin-right: 8px;
+    border: 1px solid @accent-alt;
+    background-color: @bg-alt;
+    border-radius: 2px;
+    padding: 0 8px;
+    line-height: 1;
+}
+.oo-ui-tagMultiselectWidget-handle .oo-ui-tagMultiselectWidget-group > input {
+    background-color: @bg-alt;
+    color: @text-base;
+    box-sizing: border-box;
+    border: none !important;
+    height: 2.14285716em;
+    border: 0;
+    padding: 5px 0 5px 0.57142857em;
+    margin-top: -4px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.42857143em;
+    vertical-align: top;
+}
+.oo-ui-messageWidget.oo-ui-messageWidget-block.oo-ui-flaggedElement-warning {
+    background-color: @status-warning;
+    border-color: @border-warning;
+}

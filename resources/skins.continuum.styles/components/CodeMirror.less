@@ -1,0 +1,53 @@
+@import '../variables.less';
+
+.ve-ce-surface-source.CodeMirror {
+    background: @bg-panel;
+    background-color: @color-black;
+    color: @color-white;
+    border: 1px solid @accent-primary;
+    //border-radius: 4px;
+    padding: 0 !important;
+	width: 100% !important;
+	min-height: 100% !important;
+	display: block;
+	box-sizing: border-box;
+}
+.ve-ui-surface-source .CodeMirror pre {
+    font-family: "Libertinus Mono", "Source Code Pro", monospace !important;
+}
+
+.CodeMirror-scroll {
+    padding: 0 !important;
+}
+.ve-ui-surface-source {
+	min-height: 300px !important;
+	display: block;
+}
+.CodeMirror pre, .CodeMirror-lines {
+    font-family: "Libertinus Mono", "Source Code Pro", monospace !important;
+	font-size: 14px !important;
+	line-height: 1.4 !important;
+}
+.cm-keyword { color: @code-keyword; font-weight: bold !important; }
+.cm-string  { color: @code-string !important;}
+.cm-comment { color: @code-comment !important; font-style: italic !important; }
+.cm-number  { color: @code-number !important; }
+.cm-variable { color: @code-variable !important; }
+.cm-def     { color: @code-def !important; }
+.cm-mw-template { color: @code-template !important; }
+.cm-mw-parserfunction-name { color: @code-parserfunction !important; }
+.cm-mw-section-header { color: @code-section-header !important; font-weight: bold !important; }
+.cm-mw-htmltag-attribute { color: @code-htmltag-attribute !important; }
+.cm-mw-link-brackets { color: @code-link-brackets !important; }
+.cm-mw-link-pagename { color: @code-link-pagename !important; text-decoration: underline !important; }
+.cm-mw-link-text { color: @code-link-text !important; }
+.cm-mw-exttag-attribute { color: @code-exttag-attribute !important; }
+.cm-mw-exttag-name { color: @code-exttag-name !important; }
+.cm-mw-exttag-brackets { color: @code-exttag-brackets !important; }
+.cm-mw-exttag { color: @code-exttag !important; }
+.CodeMirror-cursor { border-left: 1px solid @cursor-color !important; }
+.CodeMirror-gutters, .CodeMirror-linenumbers {
+    background-color: @code-bg !important;
+    color: @accent-hover !important;
+    border-right: 1px solid @accent-primary !important;
+}

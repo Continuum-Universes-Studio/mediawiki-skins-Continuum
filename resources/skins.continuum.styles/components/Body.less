@@ -1,0 +1,72 @@
+@import '../variables.less';
+@import '../typography.less';
+// Importing variables for colors, fonts, and other styles
+body {
+    background-color: @bg-panel; // Main background color
+    color: @text-base;          // Base text color
+    font-family: "EB Garamond", @font-content; // Content font
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: var(--font-size-medium);
+    font-feature-settings: "liga" 1, "dlig" 1, "clig" 1;
+    font-variant-ligatures: common-ligatures discretionary-ligatures contextual;
+    font-kerning: normal;
+}
+.continuum-body {
+    // Background color for the body
+    background-color: @bg-main;
+    color: @text-base;
+    padding: 20px; // Add some padding for better spacing
+    border: 2px solid @accent-primary; // Add a border for emphasis
+    border-radius: 8px; // Rounded corners for a modern look
+}
+.mw-body, .mw-header, .mw-footer-container {
+    font-feature-settings: "liga" 1, "dlig" 1, "clig" 1;
+    font-variant-ligatures: common-ligatures discretionary-ligatures contextual;
+}
+.localNotice {
+    font-family: @font-code, 'Courier New', monospace; /* Code font for local notices */
+}
+h1, h2, .mw-body h1,
+.mw-body .mw-heading1,
+.mw-body-content h1,
+.mw-body-content .mw-heading1,
+.mw-body-content h2,
+.mw-body-content .mw-heading2,
+.mw-logo-wordmark,
+#firstHeadingTitle {
+    color: @accent-primary; /* Bright Orange */
+    font-family: @font-header, 'Book Antiqua', serif !important; /* Header font */
+    font-feature-settings: "liga" 1, "dlig" 1, "clig" 1;
+    font-variant-ligatures: common-ligatures discretionary-ligatures contextual;
+}
+
+h3, h4, h5, h6 {
+    color: @accent-alt !important; /* Burnt Orange */
+    font-family: @font-alternate, 'Book Antiqua', serif !important; /* Alternate font for subheadings */
+    font-feature-settings: "liga" 1, "dlig" 1, "clig" 1;
+    font-variant-ligatures: common-ligatures discretionary-ligatures contextual;
+}
+img {
+    background-color: transparent !important; /* Ensure images have a transparent background */
+}
+.continuum-main-menu {
+    font-family: @font-content;
+}
+table {
+    border-collapse: collapse; /* Ensures no gaps between table cells */
+    width: 100%; /* Full width for tables */
+    margin-bottom: 20px; /* Spacing below tables */
+}
+.oo-ui-widget .oo-ui-widget-enabled .mw-echo-ui-notificationItemWidget :hover {
+    background-color: @bg-alt; /* Soft Peach for hover state */
+    background: @bg-alt; /* Soft Peach background on hover */
+    color: @color-inverted; /* Inverted color for text */
+    border-color: @accent-alt; /* Burnt Orange border on hover */
+}
+.oo-ui-widget .oo-ui-widget-enabled .mw-echo-ui-notificationItemWidget {
+    background-color: @bg-alt; /* Soft Peach for hover state */
+    color: @color-inverted; /* Inverted color for text */
+    border-color: @accent-alt; /* Burnt Orange border on hover */
+}

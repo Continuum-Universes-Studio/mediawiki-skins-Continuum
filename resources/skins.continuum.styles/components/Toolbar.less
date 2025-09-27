@@ -1,0 +1,80 @@
+@import '../variables.less';
+
+
+/*
+.oo-ui-fieldLayout-field {
+    background-color: @bg-alt;
+    color: @color-white;
+    border: 1px solid @accent-primary;
+    border-radius: 4px;
+}
+*/
+.skin-invert {
+    color: @text-base !important;
+}
+#msupload-dropzone {
+    background-color: @bg-alt;
+    color: @text-base !important;
+    border: 1px solid @accent-primary;
+    border-radius: 4px;
+}
+#msupload-div
+{
+    background: @bg-alt !important;
+    border-top: 1px solid @accent-primary !important;
+    padding: 0;
+    z-index: 0;
+}
+/*
+.oo-ui-widget label {
+    border: none;
+}
+.oo-ui-widget .oo-ui-widget-enabled {
+    background-color: var(--color-dark-navy);
+    color: var(--color-base);
+    //border: 1px solid var(--color-burnt-orange);
+    //border-radius: 4px;
+    border: none;
+    border-radius: 0;
+}
+*/
+.oo-ui-fieldsetLayout-group{
+    padding: 12px;
+}
+.oo-ui-buttonElement-button {
+    background-color: @icon-color;
+    background: @icon-color !important;
+    color: @color-white;
+    border: 1px solid @accent-alt;
+    cursor: pointer;
+
+    &:hover {
+        background-color: @accent-primary;
+        color: @accent-hover;
+        border-color: @accent-alt;
+        box-shadow: inset 0 0 0 1px @accent-alt, inset 0 0 0 2px @accent-primary;
+    }
+
+    &:active {
+        background-color: @accent-hover;
+        color: @accent-active;
+        border-color: @accent-alt;
+        box-shadow: inset 0 0 0 1px @accent-alt, inset 0 0 0 2px @accent-hover;
+    }
+}
+.oo-ui-checkboxInputWidget.oo-ui-widget-enabled [type='checkbox']:checked + span, .oo-ui-checkboxInputWidget.oo-ui-widget-enabled [type='checkbox']:indeterminate + span {
+    background-color: @icon-color !important;
+    border-color: @bg-button;
+}
+.oo-ui-checkboxInputWidget [type='checkbox'] + span {
+    background-color: @bg-panel;
+    position: absolute;
+    border: 1px solid @accent-alt;
+    border-radius: 4px;
+}
+.oo-ui-menuSelectWidget {
+    background-color: @bg-alt !important;
+}
+.mw-htmlform-submit-buttons {
+    background-color: @bg-interactive !important;
+}

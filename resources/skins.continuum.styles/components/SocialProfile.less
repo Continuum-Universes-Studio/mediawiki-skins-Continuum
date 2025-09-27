@@ -1,0 +1,113 @@
+@import '../variables.less';
+
+.profile-tab {
+    background-color: @bg-alt;
+    font-size: @font-size-medium;
+    text-align: center;
+    height: 22px;
+    min-width: 72px;
+    float: left;
+    padding: 12px 4px;
+    border: 2px solid @accent-alt;
+    border-radius: 8px;
+    margin: 0 5px 0 0;
+}
+.profile-tab-on {
+    background-color: @accent-alt;
+    text-align: center;
+    font-size: @font-size-medium;
+    height: 22px;
+    min-width: 72px;
+    float: left;
+    padding: 12px 4px;
+    border: 2px solid @accent-hover;
+    border-radius: 8px;
+    margin: 0 5px 0 0;
+}
+.profile-on {
+    color: @color-white;
+    font-family: @font-content, 'Book Antiqua', serif !important;
+    font-size: @font-size-medium;
+    background-color: @accent-alt;
+    border: 2px solid @accent-hover;
+    border-radius: 8px;
+    padding: 10px;
+}
+.user-gift-container {
+
+    img {
+        background: transparent;
+        border: 1px solid @accent-primary;
+        border-radius: 12px;
+        padding: 4px;
+    }
+}
+.profile-info-container {
+    background-color: @bg-alt;
+    color: @color-white;
+    border: 1px solid @accent-alt;
+    border-radius: 12px;
+    padding: 24px !important;
+    b {
+        color: @accent-hover;
+    }
+    div {
+        color: @color-white;
+    }
+}
+.listpages-blurb-size-small {
+    font-size: @font-size-small;
+    line-height: 1.4;
+    color: @color-white;
+    font-family: @font-content, 'Book Antiqua', serif !important;
+    padding: 12px;
+}
+.user-board-message {
+    border: 1px solid @accent-primary;
+    border-radius: 0.4em;
+    margin-block-end: 1em;
+    background: @bg-panel;
+    padding: 0.6em;
+    display: flex;
+    gap: 1em;
+}
+.user-board-message-from {
+    background-color: @bg-alt;
+    padding: 3px 0 5px 5px;
+}
+.no-info-container, .no-pictures-container {
+    margin-block: 0.7em 1.3em;
+    background: @bg-alt;
+    padding: 1.3em;
+    text-align: center;
+    color: @accent-alt;
+    border-radius: 0.7em;
+}
+.usergroup-badge {
+    background: rgba(255, 255, 255, 0.0);
+    color: @text-subtle;
+}
+#profile-toggle-button {
+    background-color: @bg-button;
+    color: var(--color-white);
+    border: 1px solid @accent-alt;
+    border-radius: 8px;
+    font-family: @font-code;
+    font-size: @font-size-medium;
+    padding: 8px 16px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: @accent-primary;
+        color: @accent-hover;
+        border-color: @accent-alt;
+        box-shadow: inset 0 0 0 1px @accent-alt, inset 0 0 0 2px @accent-primary;
+    }
+
+    &:active {
+        background-color: @accent-hover;
+        color: @color-inverted;
+        border-color: @accent-alt;
+        box-shadow: inset 0 0 0 1px @accent-alt, inset 0 0 0 2px @accent-hover;
+    }
+}

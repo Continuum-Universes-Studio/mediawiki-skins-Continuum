@@ -1,0 +1,37 @@
+@import '../variables.less';
+
+.gallery {
+    background-color: @bg-alt;
+    color: var(--color-white);
+    border: 1px solid @accent-alt;
+    border-radius: 12px;
+    padding: 24px !important;
+
+    .gallery-item {
+        margin-bottom: 16px;
+        border-bottom: 1px solid @accent-primary;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .gallery-item-title {
+            font-weight: bold;
+            color: @accent-primary;
+        }
+
+        .gallery-item-description {
+            color: @accent-hover;
+        }
+    }
+    li.gallerybox div.thumb {
+    background-color: @bg-panel;
+    border: 1px solid @accent-primary;
+    border-radius: 8px;
+    }
+
+}
+
+li.gallerybox div.thumb img {
+    border-radius: 6px;
+}

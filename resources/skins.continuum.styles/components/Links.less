@@ -1,0 +1,30 @@
+a {
+    color: @link;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+a:active {
+    color: @link-active;
+}
+a:visited {
+    color: @link-visited;
+}
+.continuum-pinnable-element .mw-list-item a:not(.mw-selflink):visited, .continuum-dropdown-content .mw-list-item a:not(.mw-selflink):visited {
+    color: @link-alt;
+}
+
+.mw-list-item.selected {
+    a {
+        color: @text-base !important;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    a:not(.mw-selflink):visited {
+        color: @text-base !important;
+    }
+}
