@@ -20,7 +20,7 @@ class ThemeHooks {
 			}
 		}
 
-		$valid = [ 'imperial-night', 'ubla-day', 'ubla-night', 'verdant', 'adams-chaos', 'ectoplasm-purple', 'ectoplasm-green' ];
+		$valid = [ 'imperial-night', 'ubla-day', 'ubla-night', 'verdant', 'adams-chaos', 'ectoplasm-purple', 'ectoplasm-green', 'kristens-curations', 'wikipedia-default', 'wikipedia-darkmode' ];
 		if ( !in_array( $theme, $valid, true ) ) {
 			$theme = 'imperial-night';
 		}

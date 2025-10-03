@@ -1,0 +1,124 @@
+/* === Creations of Mine === */
+body.skin-continuum.theme-kristens-curations {
+    /* Core palette (warm earthy base) */
+    --bg-main: #EBC9B1;
+    /* soft tan ivory */
+    --bg-alt: #BFA795;
+    /* muted beige panels */
+    --bg-panel: #bb8d5c;
+    /* deeper earthy brown panels */
+    --bg-interactive: linear-gradient(90deg, #EBC9B1, #BFA795, #775A3B);
+    --bg-light: #F2DED2;
+    --bg-button: #17c47c;
+    /* lighter warm highlight */
+
+    /* Text (green spectrum) */
+    --text-base: #0E3B20;
+    /* dark green */
+    --text-subtle: #3C5C4D;
+    /* pine-muted */
+    --text-accent: #4AAE9B;
+    /* subtle sea foam highlight */
+    --text-error: #B23B3B;
+
+    /* Accents (forest/evergreen vibes) */
+    --accent-primary: #1F5A40;
+    /* pine green */
+    --accent-secondary: #2E6D4E;
+    /* forest */
+    --accent-hover: #34775B;
+    /* spruce on hover */
+    --accent-active: #174733;
+    /* pressed */
+    --accent-danger: #B23B3B;
+    --accent-metal: linear-gradient(135deg, #2E6D4E 0%, #1F5A40 50%, #4AAE9B 100%);
+
+    /* Links (playful contrast) */
+    --link: #7A3DA3;
+    /* purple */
+    --link-hover: #FF7A00;
+    /* orange hover */
+    --link-active: #39FF14;
+    /* neon green active */
+    --link-visited: #9B59B6;
+    /* softer purple visited */
+
+    /* Status */
+    --status-success: #1F6D4F;
+    --status-warning: #FF944D;
+    --status-error: var(--accent-danger);
+    --status-notice: var(--text-base);
+
+    /* Borders (teal → sea foam) */
+    --border: rgba(74, 174, 155, 0.6);
+    --border-hover: rgba(74, 174, 155, 0.75);
+    --border-active: rgba(74, 174, 155, 0.9);
+
+    /* Code blocks / codemirror */
+    --code-bg: #F4E4D6;
+    --code-bg-highlight: #EBD6C9;
+    --code-identifier: #0E3B20;
+    --code-string: #4AAE9B;
+    --code-number: #8A5A30;
+    --code-keyword: #1F5A40;
+    --code-comment: #7F7F7F;
+    --code-function: #2E6D4E;
+    --code-variable: #775A3B;
+    --code-operator: #34775B;
+    --code-constant: #39FF14;
+    /* bright pop */
+    --code-type: #7A3DA3;
+    /* purple keywords */
+    --code-class: #2E6D4E;
+    --code-tag: #FF7A00;
+    --code-attribute: #4AAE9B;
+    --code-exttag: #39FF14;
+    --code-section-header: #2E6D4E;
+    --code-list: #A8622A;
+    --code-language: #6E4C2B;
+    --code-underline: #4AAE9B;
+    --code-other: #0E3B20;
+    --code-function-builtin: #34775B;
+
+    --cursor-color: var(--accent-primary);
+
+    --icon-color: var(--accent-primary);
+
+    /* Glow & accents */
+    --code-glow: rgba(74, 174, 155, 0.18);
+    --accent-glow: rgba(58, 255, 148, 0.22);
+    --metallic-sheen: rgba(255, 255, 255, 0.15);
+}
+
+/* Glow outline tuned for teal/sea foam pop */
+.theme-kristens-curations .ct-glow-outline::after {
+    background: radial-gradient(circle at 20% 10%,
+            rgba(74, 174, 155, 0.16),
+            rgba(58, 255, 148, 0.12) 40%,
+            transparent 70%);
+    filter: blur(12px) saturate(1.1);
+    opacity: 0.9;
+}
+
+.theme-kristens-curations .ct-glow-outline {
+    box-shadow:
+        0 0 10px rgba(74, 174, 155, 0.25),
+        0 1px 0 rgba(255, 255, 255, 0.25) inset;
+}
+
+/* VisualEditor toolbar */
+.theme-kristens-curations .ve-ui-toolbar,
+.theme-kristens-curations .ve-toolbar,
+.theme-kristens-curations .ve-ui-toolbar .oo-ui-toolbar {
+    background: linear-gradient(180deg, rgba(235, 201, 177, 0.92), rgba(191, 167, 149, 0.88));
+    border-color: var(--border);
+    color: var(--text-base);
+    box-shadow: 0 2px 10px rgba(47, 111, 84, 0.14);
+}
+
+/* Icons inside VE */
+.theme-kristens-curations .ve-ui-toolbar .oo-ui-iconWidget-icon,
+.theme-kristens-curations .ve-toolbar .oo-ui-iconWidget-icon {
+    color: var(--accent-primary);
+    fill: currentColor;
+}

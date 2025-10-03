@@ -1,6 +1,6 @@
 {
 	"continuum-feature-custom-font-size": {
-		"options": [ "0", "1", "2" ],
+		"options": [ "0", "1", "2", "3" ],
 		"preferenceKey": "continuum-font-size"
 	},
 	"continuum-feature-limited-width": {
@@ -9,7 +9,9 @@
 	},
 	"continuum-theme": {
 		"options": ["imperial-night", "ubla-day", "ubla-night", "verdant", 
-		"adams-chaos", "ectoplasm-purple", "ectoplasm-green"],
+			"adams-chaos", "ectoplasm-purple", "ectoplasm-green", "kristens-curations",
+			"wikipedia-default", "wikipedia-darkmode"
+		],
 		"preferenceKey": "continuum-theme",
 		"type": "radio"
 	}

@@ -553,7 +553,10 @@ class Hooks implements
 				'continuum-theme-verdant'        => 'verdant',
 				'continuum-theme-adams-chaos'        => 'adams-chaos',
 				'continuum-theme-ectoplasm-purple'        => 'ectoplasm-purple',
-				'continuum-theme-ectoplasm-green'        => 'ectoplasm-green'
+				'continuum-theme-ectoplasm-green'        => 'ectoplasm-green',
+				'continuum-theme-kristens-curations'        => 'kristens-curations',
+				'continuum-theme-wikipedia-default'        => 'wikipedia-default',
+				'continuum-theme-wikipedia-darkmode'        => 'wikipedia-darkmode',
 			],
 			'hide-if' => [ '!==', 'skin', 'continuum' ],
 			],
@@ -576,6 +579,7 @@ class Hooks implements
 					'continuum-feature-custom-font-size-0-label' => '0',
 					'continuum-feature-custom-font-size-1-label' => '1',
 					'continuum-feature-custom-font-size-2-label' => '2',
+					'continuum-feature-custom-font-size-3-label' => '3'
 				],
 				'hide-if' => [ '!==', 'skin', Constants::SKIN_NAME_MODERN ],
 			],

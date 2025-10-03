@@ -18,7 +18,7 @@ final class Constants {
 	/**
 	 * @var string
 	 */
-	public const SKIN_VERSION_LATEST = '2';
+	public const SKIN_VERSION_LATEST = '2.2.0';
 
 	// These are tightly coupled to skin.json's configs. See skin.json for documentation.
 	/**

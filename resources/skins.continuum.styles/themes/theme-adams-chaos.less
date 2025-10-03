@@ -6,6 +6,16 @@ body.skin-continuum.theme-adams-chaos {
   --bg-panel:               #090808;   /* deep panel bg */
   --bg-interactive:         linear-gradient(90deg, #160606, #2a0606); /* interactive elements */
   --bg-light:               #3a1a1a;   /* lighter surfaces */
+  --bg-button:              linear-gradient(145deg,
+                              #5e0808 0%,
+                              /* deep edge */
+                              #a31b1b 40%,
+                              /* mid metallic crimson */
+                              #e63b3b 70%,
+                              /* hot reflective red */
+                              #ff5a5a 100%
+                              /* bright sheen highlight */
+                            );
   
   --text-base:              #F6F6F6;   /* soft white */
   --text-subtle:            #bdbdbd;   /* muted */
@@ -14,10 +24,11 @@ body.skin-continuum.theme-adams-chaos {
 
   /* Accent palette (metallic red theme) */
   --accent-primary:         #c31b1b;   /* metallic crimson */
+  --accent-secondary:       #7e0202;   /* yellow-green */
   --accent-hover:           #ff3b3b;   /* hot hover */
   --accent-active:          #a51010;   /* pressed */
   --accent-danger:          #ff3b3b;
-  --accent-metal:           linear-gradient(135deg,#6b0f0f 0%,#a31b1b 40%,#e63b3b 100%);
+  --accent-metal:           linear-gradient(135deg,#5e0808 0%,#a31b1b 40%,#e63b3b 100%);
 
   /* Links */
   --link:                    var(--accent-primary);

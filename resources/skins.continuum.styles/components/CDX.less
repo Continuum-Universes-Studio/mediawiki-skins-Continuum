@@ -20,7 +20,17 @@
     margin: 12px 0;
 }
 .cdx-button {
-    background-color: @icon-color;
+    background-color: @bg-button !important;
+    color: @text-base;
+    border: 1px solid @accent-alt;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-family: @font-code;
+    font-size: @font-size-medium;
+    cursor: pointer;
+}
+.cdx-button:enabled {
+    background: @bg-button !important;
     color: @text-base;
     border: 1px solid @accent-alt;
     border-radius: 8px;
@@ -32,4 +42,34 @@
 .uls-trigger.cdx-button span {
     color: @text-base;
 
+
+}
+a[data-mw="interface"], input[role="button"] {
+    background: @bg-button !important;
+    border-radius: 8px;
+}
+#ca-unwatch a {
+    color: @text-base !important;
+}
+#ca-watch a {
+    color: @text-base !important;
+}
+.continuum-menu-content  {
+    a {
+        color: @accent-primary !important;
+    }
+    a:visited {
+        color: @accent-secondary !important;
+    }
+    a:hover {
+        color: @accent-hover !important;
+    }
+}
+.continuum-dropdown input[role="button"] {
+    background: @bg-button !important;
+    background-color: @bg-button !important;
+    border-radius: 8px;
+}
+#continuum-user-links-dropdown-label {
+    border-radius: 8px;
 }
