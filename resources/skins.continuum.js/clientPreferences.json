@@ -9,7 +9,7 @@
 	},
 	"continuum-theme": {
 		"options": ["imperial-night", "ubla-day", "ubla-night", "verdant", 
-		"adams-chaos"],
+		"adams-chaos", "ectoplasm-purple", "ectoplasm-green"],
 		"preferenceKey": "continuum-theme",
 		"type": "radio"
 	}

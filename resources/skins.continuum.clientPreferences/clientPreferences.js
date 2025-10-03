@@ -14,7 +14,9 @@
 		'ubla-day': ['#7bd3cf', '#3167ff'],
 		'ubla-night': ['#0b1930', '#8cf6ff'],
 		'verdant': ['#0c2a1b', '#5ee37a'],
-		'adams-chaos': ['#3f1f1f', '#6b0f0f']
+		'adams-chaos': ['#000000', '#6b0f0f'],
+		'ectoplasm-purple': ['#663b6b', '#c6e247'],
+		'ectoplasm-green': ['#102701', '#00ff22']
 	};
 
 	function safeMsgText( key, fallback ) {

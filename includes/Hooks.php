@@ -552,6 +552,8 @@ class Hooks implements
 				'continuum-theme-ubla-night'     => 'ubla-night',
 				'continuum-theme-verdant'        => 'verdant',
 				'continuum-theme-adams-chaos'        => 'adams-chaos',
+				'continuum-theme-ectoplasm-purple'        => 'ectoplasm-purple',
+				'continuum-theme-ectoplasm-green'        => 'ectoplasm-green'
 			],
 			'hide-if' => [ '!==', 'skin', 'continuum' ],
 			],

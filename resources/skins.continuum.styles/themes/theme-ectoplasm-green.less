@@ -1,0 +1,239 @@
+/* Continuum — Ectoplasm */
+body.skin-continuum.theme-ectoplasm-green {
+    /* Core palette */
+    --bg-panel: #04110b;
+    /* deep panels, footer (near-black green) */
+    --bg-main: #07140f;
+    /* page background */
+    --bg-alt: #0b1f17;
+    /* sidebar, alt panels */
+    --bg-interactive: #0d2a20;
+    /* toc, interactive surfaces */
+    --bg-light: #123427;
+    /* lighter surfaces */
+    --bg-button: #1a3f2f;
+    /* button base (darker for contrast) */
+
+    --text-base: #eaffea;
+    /* default text (ghost-white with green hint) */
+    --text-subtle: #a7c2ad;
+    /* muted text */
+    --text-alt: #8af7c2;
+    /* mint accents */
+    --text-accent: #d7ff3c;
+    /* ecto-yellow highlights */
+    --text-error: #ff4d6d;
+    /* destructive text (ecto pink-red) */
+    --text-hover: #b9ffb9;
+    /* hover text tint */
+
+    /* Accent palette */
+    --accent-primary: #39ff14;
+    /* neon slime (links, primary buttons) */
+    --accent-hover: #6bff7a;
+    /* lighter slime hover */
+    --accent-active: #12d95c;
+    /* pressed/active state */
+    --accent-alt: #00ffd5;
+    /* spectral cyan secondary */
+    --accent-danger: #ff3b3b;
+    /* destructive */
+    --accent-gold: #d7ff3c;
+    /* “ectogold” for special highlights */
+
+    /* Links */
+    --link: var(--accent-primary);
+    --link-hover: var(--accent-hover);
+    --link-active: var(--accent-active);
+    --link-alt: var(--accent-alt);
+    --link-visited: #b78cff;
+    /* lavender-violet so visited is distinct */
+
+    /* Status colors */
+    --status-success: #17b57e;
+    /* healthy green */
+    --status-warning: #eaff58;
+    /* bright warning without harsh orange */
+    --status-error: #ff4d6d;
+    /* error/pink-red */
+    --status-notice: #7ef0ff;
+    /* cool cyan notice */
+
+    /* Borders */
+    --border: var(--accent-primary);
+    --border-hover: var(--accent-hover);
+    --border-active: var(--accent-active);
+    --border-error: var(--accent-danger);
+    --border-success: #28d39a;
+    --border-warning: var(--status-warning);
+    --border-notice: #eaffea;
+
+    /* Extended code token palette — Ectoplasm */
+    --code-bg: #06110b;
+    /* editor background */
+    --code-bg-highlight: #0e1c14;
+    /* line highlight */
+    --code-identifier: #eaffea;
+    /* names/idents */
+    --code-number: #c9ff53;
+    /* lime */
+    --code-string: #7ef0ff;
+    /* spectral cyan */
+    --code-keyword: #cb7cff;
+    /* ghostly magenta for structure */
+    --code-comment: #6e8a79;
+    /* mossy gray-green */
+    --code-function: #7dffa3;
+    /* bright mint */
+    --code-function-builtin: #56f58a;
+    /* builtin fn slightly deeper */
+    --code-variable: #f1ffb3;
+    /* pale ecto-yellow */
+    --code-operator: #8dff6a;
+    /* lime-mint */
+    --code-constant: #9be0ff;
+    /* pale blue constants */
+    --code-type: #b3ffcf;
+    /* types */
+    --code-class: #a3ffea;
+    /* classes */
+    --code-interface: #7ee5ff;
+    /* interfaces */
+    --code-def: #ff9bb0;
+    /* definitions/defs */
+    --code-template: #8aa0ff;
+    /* template braces/markers */
+    --code-parser-function: #7acfff;
+    /* parser functions */
+    --code-html-attribute: #8cf7c2;
+    /* HTML attrs */
+    --code-link-brackets: #98b4a6;
+    /* [[ ]]
+    --code-link-pagename: #cfeee0;       /* page names */
+    --code-link-text: #e7ffe7;
+    /* display text */
+    --code-exttag: #37e7c0;
+    /* extension tags */
+    --code-exttag-attribute: #d7ff3c;
+    --code-exttag-name: #00ffd5;
+    --code-exttag-brackets: #7ef0ff;
+    --code-section-header: #39ff14;
+    --code-underline: #eaffea;
+    --code-other: #eaffea;
+    --code-list: #b3ff7a;
+    --code-tag: #cb7cff;
+    --code-attribute: #8cf7c2;
+    --code-language: #d7ff3c;
+    --code-glow: rgba(57, 255, 20, 0.12);
+    /* soft ecto aura */
+
+    --cursor-color: var(--accent-primary);
+
+    /* VisualEditor chrome tuned for ectoplasm */
+    --ve-toolbar-bg: #0f1a14;
+    /* dark bar */
+    --ve-toolbar-border: var(--accent-primary);
+    --ve-toolbar-hover: #153323;
+    --ve-toolbar-background-active: #0a120e;
+
+    /* Elevation glow */
+    --shadow: rgba(57, 255, 20, 0.35);
+
+    /* Optional extras your skin can use (if you like) */
+    --focus-ring: 0 0 0 3px rgba(57, 255, 20, 0.35);
+    --selection-bg: rgba(57, 255, 20, 0.25);
+    --selection-text: #07140f;
+}
+
+/* Example helpers if your components consume them */
+body.skin-continuum.theme-ectoplasm-green ::selection {
+    background: var(--selection-bg);
+    color: var(--selection-text);
+}
+
+body.skin-continuum.theme-ectoplasm-green {
+    --icon-color: var(--accent-primary);
+}
+
+
+/* one rule to tint all masked icons */
+.continuum-icon,
+.mw-ui-icon {
+    color: var(--icon-color);
+}
+
+/* Mask-based icons use background-color or color. Set both. */
+.theme-ectoplasm-green .mw-ui-icon,
+.theme-ectoplasm-green .mw-ui-icon-element .mw-ui-icon {
+    background-color: var(--icon-color) !important;
+    /* older modules */
+    color: var(--icon-color) !important;
+    /* newer ones using currentColor */
+}
+
+/* Hover/focus variant (optional) */
+.theme-ectoplasm-green a:hover .mw-ui-icon,
+.theme-ectoplasm-green .oo-ui-buttonWidget:hover .oo-ui-iconElement-icon {
+    filter: drop-shadow(0 0 6px rgba(32, 227, 255, .35));
+}
+
+.theme-ectoplasm-green .cdx-icon,
+.theme-ectoplasm-green .cdx-button .cdx-icon,
+.theme-ectoplasm-green .cdx-menu__icon {
+    color: var(--icon-color);
+}
+
+.theme-ectoplasm-green svg,
+.theme-ectoplasm-green .ct-icon svg {
+    color: var(--icon-color);
+}
+
+.theme-ectoplasm-green svg [fill="#000"] {
+    fill: var(--icon-color) !important;
+}
+
+
+
+/* +++++++++++++++++++++++++++++++++++++
+   Additional theme-specific tweaks
+   ++++++++++++++++++++++++++++++++ */
+/* Regal borders + vignette + star speckle for Imperial Night */
+.skin-continuum.theme-ectoplasm-green {
+    /* subtle vignette */
+    background-image:
+        radial-gradient(1200px 400px at 10% 10%, rgba(4, 10, 20, 0.08), transparent 10%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.12));
+    background-blend-mode: overlay, normal;
+}
+
+/* tiny star specks (very subtle) */
+.skin-continuum.theme-ectoplasm-green::after {
+    content: "";
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'><g fill='%23ffffff' fill-opacity='0.6'><circle cx='10' cy='20' r='0.6'/><circle cx='80' cy='15' r='0.7'/><circle cx='45' cy='100' r='0.5'/><circle cx='115' cy='65' r='0.6'/><circle cx='20' cy='85' r='0.5'/></g></svg>");
+    mix-blend-mode: screen;
+    z-index: 0;
+}
+
+/* subtle metallic border for cards/panels */
+.skin-continuum.theme-ectoplasm-green .mw-body {
+    border-color: var(--border);
+}
+
+.skin-continuum.theme-ectoplasm-green .mw-portlet,
+.skin-continuum.theme-ectoplasm-green .oo-ui-window {
+    border: 1px solid rgba(255, 215, 107, 0.06);
+    box-shadow: 0 6px 18px rgba(3, 6, 12, 0.6);
+}
+
+/* gold rim accent on focused interactive elements */
+.skin-continuum.theme-ectoplasm-green a:focus,
+.skin-continuum.theme-ectoplasm-green button:focus,
+.skin-continuum.theme-ectoplasm-green input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 215, 107, 0.08), 0 0 12px rgba(36, 215, 255, 0.02);
+    border-color: rgba(255, 215, 107, 0.26);
+}

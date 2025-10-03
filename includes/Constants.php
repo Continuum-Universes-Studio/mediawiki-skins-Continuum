@@ -304,6 +304,14 @@ final class Constants {
 	 */
 	public const THEME_ADAMS_CHAOS = 'adams-chaos';
 	/**
+	 * @var string
+	 */
+	public const THEME_ECTOPLASM_PURPLE = 'ectoplasm-purple';
+	/**
+	 * @var string
+	 */
+	public const THEME_ECTOPLASM_GREEN = 'ectoplasm-green';
+	/**
 	 * This class is for namespacing constants only. Forbid construction.
 	 * @throws FatalError
 	 * @return never

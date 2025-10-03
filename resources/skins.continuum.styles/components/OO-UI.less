@@ -105,7 +105,7 @@
     border-radius: 8px;
 }
 .oo-ui-optionWidget-selected {
-        background: @accent-alt !important;
+        background: @bg-light !important;
         color: @text-base;
         border-radius: 8px;
     .oo-ui-optionWidget-highlighted {
@@ -254,4 +254,43 @@
 .oo-ui-messageWidget.oo-ui-messageWidget-block.oo-ui-flaggedElement-warning {
     background-color: @status-warning;
     border-color: @border-warning;
+}
+.mw-mwoauthconsumerregistration-proposed {
+    background: @bg-panel !important;
+    border: 2px solid @accent-alt;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px @shadow-color;
+    td {
+        border: 1px solid @accent-alt !important;
+        background: @bg-panel !important;
+    }
+}
+.mw-mwoauthconsumerregistration-approved {
+    background: @bg-alt !important;
+    border: 2px solid @accent-primary;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px @shadow-color;
+    td {
+        border: 1px solid @accent-primary !important;
+        background: @bg-light !important;
+    }
+}
+.mw-mwoauthmanageconsumers-proposed,
+.mw-mwoauthmanagemygrants-proposed,
+.mw-mwoauthconsumerregistration-proposed {
+    background-color: @bg-panel !important;
+    td {
+            border: 1px solid @accent-alt !important;
+            background: @bg-panel !important;
+    }
+}
+.mw-mwoauthmanageconsumers-approved,
+.mw-mwoauthmanagemygrants-approved,
+.mw-mwoauthconsumerregistration-approved {
+    background: @bg-alt !important;
+    border: 2px solid @accent-primary;
+    td {
+        border: 1px solid @accent-primary !important;
+        background: @bg-light !important;
+    }
 }
