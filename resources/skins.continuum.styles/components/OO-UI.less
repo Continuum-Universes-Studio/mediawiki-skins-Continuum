@@ -294,3 +294,27 @@
         background: @bg-light !important;
     }
 }
+.oo-ui-tagMultiselectWidget.oo-ui-widget-enabled {
+    background-color: @bg-alt !important;
+}
+.oo-ui-tagItemWidget.oo-ui-widget-enabled:not(.oo-ui-tagItemWidget-fixed) {
+    background-color: @bg-alt !important;
+    padding-right: 23px;
+}
+.oo-ui-tagMultiselectWidget-handle .oo-ui-tagMultiselectWidget-group > input {
+    background-color: transparent;
+    color: @text-base !important;
+    box-sizing: border-box;
+    height: 2.14285716em;
+    border: 0;
+    padding: 5px 0 5px 0.57142857em;
+    margin-top: -4px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.42857143em;
+    vertical-align: top;
+}
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled > .oo-ui-buttonElement-button {
+    color: var(--color-base, #202122);
+    background-color: @accent-alt;
+}
