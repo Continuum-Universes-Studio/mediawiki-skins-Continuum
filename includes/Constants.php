@@ -312,6 +312,18 @@ final class Constants {
 	 */
 	public const THEME_ECTOPLASM_GREEN = 'ectoplasm-green';
 	/**
+	 * @var string
+	 */
+	public const THEME_KRISTENS_CURATIONS = 'kristens-curations';
+	/**
+	 * @var string
+	 */
+	public const THEME_WIKIPEDIA_DEFAULT = 'wikipedia-default';
+	/**
+	 * @var string
+	 */
+	public const THEME_WIKIPEDIA_DARKMODE = 'wikipedia-darkmode';
+	/**
 	 * This class is for namespacing constants only. Forbid construction.
 	 * @throws FatalError
 	 * @return never

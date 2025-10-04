@@ -110,7 +110,13 @@
 						"continuum-theme-imperial-night-label",
 						"continuum-theme-ubla-day-label",
 						"continuum-theme-ubla-night-label",
-						"continuum-theme-verdant-label"
+						"continuum-theme-verdant-label",
+						"continuum-theme-adams-chaos-label",
+						"continuum-theme-ectoplasm-purple-label",
+						"continuum-theme-ectoplasm-green-label",
+						"continuum-theme-kristens-curations-label",
+						"continuum-theme-wikipedia-default-label",
+						"continuum-theme-wikipedia-darkmode-label"
 					]
 				}
 			]
@@ -316,10 +322,17 @@
 				"continuum-feature-custom-font-size-0-label",
 				"continuum-feature-custom-font-size-1-label",
 				"continuum-feature-custom-font-size-2-label",
+				"continuum-feature-custom-font-size-3-label",
 				"continuum-theme-imperial-night-label",
 				"continuum-theme-ubla-day-label",
 				"continuum-theme-ubla-night-label",
-				"continuum-theme-verdant-label"
+				"continuum-theme-verdant-label",
+				"continuum-theme-adams-chaos-label",
+				"continuum-theme-ectoplasm-purple-label",
+				"continuum-theme-ectoplasm-green-label",
+				"continuum-theme-kristens-curations-label",
+				"continuum-theme-wikipedia-default-label",
+				"continuum-theme-wikipedia-darkmode-label"
 			],
 			"dependencies": [
 				"mediawiki.api",

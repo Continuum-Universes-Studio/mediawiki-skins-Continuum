@@ -3,7 +3,7 @@
 
 .uls-menu, .row {
     background-color: @bg-panel;
-    background: @bg-panel !important;
+    background: @bg-alt !important;
     border: 1px solid @accent-primary !important;
     border-radius: 12px !important;
 }
@@ -17,6 +17,7 @@
     color: @color-base;
     font-size: @font-size-medium;
     font-family: @font-content, 'Book Antiqua', serif !important;
+    background-color: @bg-panel !important;
 }
 .uls-language-block .antonym a {
     color: @color-base !important;
@@ -43,4 +44,69 @@
     color: @accent-primary !important;
     font-size: @font-size-large;
     font-family: @font-header, 'Book Antiqua', serif !important;
+}
+.uls-language-option--highlighted {
+    background-color: @bg-light !important;
+    color: @accent-hover !important;
+    border-radius: 8px;
+}
+label.uls-search-label {
+    background: none !important;
+    background-color: transparent !important;
+}
+.cdx-button:enabled.uls-language-settings-button {
+    background: @bg-button !important;
+    color: @icon-color !important;
+}
+.languagesettings-menu .menu-section.active {
+    background-color: @bg-light !important;
+    color: @accent-alt !important;
+    padding-left: 40px;
+    background-position: left 13px top 6px;
+    border-left-width: 3px;
+    border-left-color: @accent-secondary !important;
+    .settings-text {
+        color: @text-base !important;
+    }
+}
+.languagesettings-menu .menu-section {
+    text-align: left;
+    width: 100%;
+    outline: 0;
+    color: @text-subtle !important;
+    padding: 5px 0 5px 42px;
+    border: 1px solid @accent-primary !important;
+    background: @bg-panel !important;
+    background-size: 20px auto;
+    cursor: pointer;
+}
+.uls-language-settings-close-block {
+    background: @bg-alt !important;
+}
+#languagesettings-settings-panel {
+    background-color: @bg-alt!important;
+    color: @color-base !important;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+.twelve{
+    background-color: @bg-panel !important;
+    border-radius: 12px !important;
+}
+.grid .row .row {
+    border-radius: 12px !important;
+}
+#uls-display-settings-fonts-tab {
+    border-radius: 12px !important;
+    margin-left: 4px;
+}
+#uls-display-settings-language-tab {
+    border-radius: 12px !important;
+    margin-right: 4px;
+}
+.uls-sub-panel {
+    border-top: none !important;
+}
+input[type="text"].uls-filterinput {
+    background: @bg-panel !important;
 }

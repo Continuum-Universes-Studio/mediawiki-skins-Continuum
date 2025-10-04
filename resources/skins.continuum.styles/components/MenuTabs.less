@@ -8,6 +8,9 @@
 
 	// With mw-ui-icons, expand watchstar and wikilove links it to cover full touch area
 	.mw-list-item {
+		background: @bg-alt;
+		border-radius: 8px;
+		margin: 0 2px;
 		.cdx-button--icon-only {
 			// Align small icons with the bottom of the tabs.
 			margin: 2px 0 0;
@@ -38,7 +41,7 @@
 
 	.mw-list-item.selected a {
 		.mixin-continuum-selected-link();
-		border-bottom: 2px @border-style-base;
+		border-bottom: 2px solid @accent-light;
 	}
 }
 

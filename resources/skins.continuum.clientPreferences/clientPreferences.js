@@ -15,11 +15,11 @@
 		'ubla-night': ['#0b1930', '#8cf6ff'],
 		'verdant': ['#0c2a1b', '#5ee37a'],
 		'adams-chaos': ['#000000', '#6b0f0f'],
-		'ectoplasm-purple': ['#663b6b', '#c6e247'],
-		'ectoplasm-green': ['#102701', '#00ff22'],
+		'ectoplasm-purple': ['#413256', '#A3B745'],
+		'ectoplasm-green': ['#003f03ff', '#00ff22'],
 		'kristens-curations': ['#EBC9B1', '#0D4013'],
-		'wikipedia-default': ['#ffffff', '#000'],
-		'wikipedia-darkmode': ['#202122', '#5c5c5c']
+		'wikipedia-default': ['#ffffff', '#2f6bdaff'],
+		'wikipedia-darkmode': ['#202122', '#025badff']
 	};
 
 	function safeMsgText( key, fallback ) {

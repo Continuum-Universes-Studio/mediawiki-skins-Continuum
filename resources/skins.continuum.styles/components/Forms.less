@@ -119,7 +119,33 @@ input[type="checkbox"] {
 		outline: none;
 	}
 }
-
+label {
+	background-color: @bg-button !important;
+	background: @bg-button !important;
+}
+label#continuum-page-titlebar-toc-label {
+	border-radius: 8px;
+}
+label#continuum-main-menu-dropdown-label {
+	border-radius: 8px;
+}
+input[type="checkbox"][aria-label="Tools"]{
+	border-color: @accent-hover;
+	background: @bg-button;
+	background-color: @bg-button;
+}
+#continuum-page-tools-dropdown-checkbox {
+	background: @bg-button;
+	background-color: @bg-button;
+	border-radius: 8px;
+	padding: 12px;
+	color: @text-base;
+}
+label#continuum-page-tools-dropdown-label {
+	padding: 15px 6px;
+	border-radius: 8px;
+	color: @text-base;
+}
 input[type="checkbox"]:checked {
 	background-color: @accent-alt;
     background: @accent-alt !important;

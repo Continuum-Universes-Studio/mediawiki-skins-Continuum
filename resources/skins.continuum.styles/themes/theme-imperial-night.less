@@ -22,6 +22,7 @@ body.skin-continuum.theme-imperial-night {
   --accent-alt:     #FF5733;  /* burnt orange (secondary accents) */
   --accent-danger:  #FF4500;  /* destructive red-orange */
   --accent-gold:    #FFD700;  /* regal gold */
+  --accent-light:   #FFE4B5;  /* light gold highlight */
 
   /* Links */
   --link:           var(--accent-primary);
@@ -83,7 +84,7 @@ body.skin-continuum.theme-imperial-night {
 --code-glow:               rgba(255,215,107,0.08);
 
   --cursor-color:  var(--accent-primary);
-
+  --icon-color: #10225e;
   /* visual editor */
   --ve-toolbar-bg:   rgb(255, 133, 27);
   --ve-toolbar-border: rgb(255, 133, 27);
@@ -92,20 +93,19 @@ body.skin-continuum.theme-imperial-night {
 
   --shadow: rgba(249, 161, 53, 0.55);
 }
-body.skin-continuum.theme-imperial-night { --icon-color: var(--accent-primary); }
 
 
 /* one rule to tint all masked icons 
 .continuum-icon,
 .mw-ui-icon { color: var(--icon-color); }
 */
-/* Mask-based icons use background-color or color. Set both. */
+/* Mask-based icons use background-color or color. Set both. 
 .theme-imperial-night .mw-ui-icon,
 .theme-imperial-night .mw-ui-icon-element .mw-ui-icon{
-  background-color: var(--icon-color) !important; /* older modules */
-  color: var(--icon-color) !important;            /* newer ones using currentColor */
+  background-color: var(--icon-color) !important; 
+  color: var(--icon-color) !important;            
 }
-
+*/
 /* Hover/focus variant (optional) */
 .theme-imperial-night a:hover .mw-ui-icon,
 .theme-imperial-night .oo-ui-buttonWidget:hover .oo-ui-iconElement-icon {

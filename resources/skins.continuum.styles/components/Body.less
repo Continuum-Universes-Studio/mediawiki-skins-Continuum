@@ -70,15 +70,30 @@ table {
     color: @color-inverted; /* Inverted color for text */
     border-color: @accent-alt; /* Burnt Orange border on hover */
 }
-.mw-body-content .mw-parser-output p {
-    text-indent: 30px;/* Indent paragraphs for better readability */
+/*
+.mw-body-content .mw-parser-output p, div#text {
+    text-indent: 30px;
 }
 .mw-body-content .mw-parser-output div.note p {
-    text-indent: 0 !important; /* No indent for paragraphs following notes */
+    text-indent: 0 !important; 
 }
 li p {
-    text-indent: 0 !important; /* No indent for paragraphs within list items */
+    text-indent: 0 !important; 
 }
 .ve-ce-branchNode {
-    text-indent: 0 !important; /* No indent for paragraphs within branch nodes */
+    text-indent: 0 !important; 
+}*/
+div.mw-references-wrap {
+    background-color: @bg-alt !important; /* Soft Peach background for reference section */
+    border-left: 4px solid @accent-primary; /* Bright Orange left border for ordered lists */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    padding: 12px; /* Padding for better spacing */
+    margin-top: 20px; /* Spacing above the references section */
+ /* No indent for paragraphs */
+}
+ol {
+    margin-left: 4em !important; /* No indent for paragraphs */
+}
+.mw-number-text span {
+    color: @accent-secondary !important; /* Muted Teal for strikethrough text */
 }
