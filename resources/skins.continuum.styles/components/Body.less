@@ -4,7 +4,7 @@
 body {
     background-color: @bg-panel; // Main background color
     color: @text-base;          // Base text color
-    font-family: "EB Garamond", @font-content; // Content font
+    font-family: @font-body; // Content font
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -26,7 +26,7 @@ body {
     font-variant-ligatures: common-ligatures discretionary-ligatures contextual;
 }
 .localNotice {
-    font-family: @font-code, 'Courier New', monospace; /* Code font for local notices */
+    font-family: @font-monospace, 'Courier New', monospace; /* Code font for local notices */
 }
 h1, h2, .mw-body h1,
 .mw-body .mw-heading1,
@@ -37,14 +37,14 @@ h1, h2, .mw-body h1,
 .mw-logo-wordmark,
 #firstHeadingTitle {
     color: @accent-primary; /* Bright Orange */
-    font-family: @font-header, 'Book Antiqua', serif !important; /* Header font */
+    font-family: @font-heading !important; /* Header font */
     font-feature-settings: "liga" 1, "dlig" 1, "clig" 1;
     font-variant-ligatures: common-ligatures discretionary-ligatures contextual;
 }
 
 h3, h4, h5, h6 {
     color: @accent-alt !important; /* Burnt Orange */
-    font-family: @font-alternate, 'Book Antiqua', serif !important; /* Alternate font for subheadings */
+    font-family: @font-alt !important; /* Alternate font for subheadings */
     font-feature-settings: "liga" 1, "dlig" 1, "clig" 1;
     font-variant-ligatures: common-ligatures discretionary-ligatures contextual;
 }
@@ -52,7 +52,7 @@ img {
     background-color: transparent !important; /* Ensure images have a transparent background */
 }
 .continuum-main-menu {
-    font-family: @font-content;
+    font-family: @font-body;
 }
 table {
     border-collapse: collapse; /* Ensures no gaps between table cells */

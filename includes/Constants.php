@@ -323,6 +323,56 @@ final class Constants {
 	 * @var string
 	 */
 	public const THEME_WIKIPEDIA_DARKMODE = 'wikipedia-darkmode';
+	
+	// Font Schemes
+	/**
+	 * @var string
+	 */
+	public const FONT_SCHEME_DEFAULT = 'default';
+	/**
+	 * @var string
+	 */
+	public const FONT_SCHEME_SERIF = 'serif';
+	/**
+	 * @var string
+	 */
+	public const FONT_SCHEME_SANS = 'sans-serif';
+	/**
+	 * @var string
+	 */
+	public const FONT_SCHEME_MONOSPACE = 'monospace';
+	/**
+	 * @var string
+	 */
+	public const FONT_SCHEME_ANTIQUE = 'antiqua';
+	/**
+	 * @var string
+	 */
+	public const FONT_SCHEME_CELTICA = 'celtica';
+	/**
+	 * @var string
+	 */
+	public const FONT_SCHEME_GERMANICA = 'germanica';
+	/**
+	 * @var string
+	 */
+	public const FONT_SCHEME_METAMORPHOUS = 'metamorphous';
+	/**
+	 * @var string
+	 */
+	public const FONT_SCHEME_PHOSPHORUS = 'phosphorus';
+	/**
+	 * @var string
+	 */
+	public const FONT_SCHEME_MEDIEVAL = 'medieval';
+	/**
+	 * @var string
+	 */
+	public const FONT_SCHEME_OPENDYSLEXIC = 'opendyslexic';
+	/**
+	 * @var string
+	 */
+	public const PREF_KEY_FONT_SCHEME = 'continuum-font-scheme';
 	/**
 	 * This class is for namespacing constants only. Forbid construction.
 	 * @throws FatalError

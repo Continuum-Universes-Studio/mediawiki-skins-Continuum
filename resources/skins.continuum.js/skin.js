@@ -118,7 +118,13 @@ function main( window ) {
                 preferenceKey: 'continuum-theme',
                 betaMessage: false,
                 type: 'radio'
-            }
+            },
+			'continuum-font-scheme': {
+				options: [ 'metamorphous', 'opendyslexic', 'monospace', 'phosphorus', 'serif', 'sans-serif', 'antiqua', 'celtica', 'germanica', 'medieval' ],
+				preferenceKey: 'continuum-font-scheme',
+				betaMessage: false,
+				type: 'radio'
+			}
         };
     };
 

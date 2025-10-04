@@ -1,19 +1,7 @@
 {
 	"name": "Continuum forked from Vector",
-	"version": "2.3.2",
+	"version": "3.0.0",
 	"author": [
-		"[https://www.mediawiki.org/wiki/Readers/Web/Team Readers Web Team]",
-		"Trevor Parscal",
-		"Roan Kattouw",
-		"Alex Hollender",
-		"Bernard Wang",
-		"Clare Ming",
-		"Jan Drewniak",
-		"Jon Robson",
-		"Nick Ray",
-		"Sam Smith",
-		"Stephen Niedzielski",
-		"Volker E.",
 		"Christian Daniel Jensen",
 		"Thanks to Onika, Anita, and ChatGPT for instructions"
 	],
@@ -116,7 +104,18 @@
 						"continuum-theme-ectoplasm-green-label",
 						"continuum-theme-kristens-curations-label",
 						"continuum-theme-wikipedia-default-label",
-						"continuum-theme-wikipedia-darkmode-label"
+						"continuum-theme-wikipedia-darkmode-label",
+						"continuum-font-scheme-name",
+						"continuum-font-scheme-metamorphous-label",
+						"continuum-font-scheme-opendyslexic-label",
+						"continuum-font-scheme-monospace-label",
+						"continuum-font-scheme-phosphorus-label",
+						"continuum-font-scheme-serif-label",
+						"continuum-font-scheme-sans-serif-label",
+						"continuum-font-scheme-antiqua-label",
+						"continuum-font-scheme-celtica-label",
+						"continuum-font-scheme-germanica-label",
+						"continuum-font-scheme-medieval-label"
 					]
 				}
 			]
@@ -144,7 +143,8 @@
 		"continuum-toc-pinned": 1,
 		"continuum-appearance-pinned": 1,
 		"continuum-font-size": 0,
-		"continuum-theme": "imperial-night"
+		"continuum-theme": "imperial-night",
+		"continuum-font-scheme": "metamorphous"
 	},
 	"HookHandlers": {
 		"ContinuumCentralAuthHooks": {
@@ -168,7 +168,10 @@
 		"SkinPageReadyConfig": "ContinuumHooks",
 		"GetBetaFeaturePreferences": "ContinuumHooks",
     	"SkinBuildSidebar": "MediaWiki\\Skins\\Continuum\\Hooks::onSkinBuildSidebar",
-		"BeforePageDisplay": "MediaWiki\\Skins\\Continuum\\ThemeHooks::onBeforePageDisplay"
+		"BeforePageDisplay": [
+			"MediaWiki\\Skins\\Continuum\\ThemeHooks::onBeforePageDisplay",
+			"MediaWiki\\Skins\\Continuum\\FontSchemeHooks::onBeforePageDisplay"
+		]
 	},
 	"@note": "When modifying skins.continuum.styles definition, make sure the installer still works",
 	"ResourceModules": {
@@ -332,7 +335,17 @@
 				"continuum-theme-ectoplasm-green-label",
 				"continuum-theme-kristens-curations-label",
 				"continuum-theme-wikipedia-default-label",
-				"continuum-theme-wikipedia-darkmode-label"
+				"continuum-theme-wikipedia-darkmode-label",
+				"continuum-font-scheme-antiqua-label",
+				"continuum-font-scheme-celtica-label",
+				"continuum-font-scheme-germanica-label",
+				"continuum-font-scheme-medieval-label",
+				"continuum-font-scheme-metamorphous-label",
+				"continuum-font-scheme-monospace-label",
+				"continuum-font-scheme-opendyslexic-label",
+				"continuum-font-scheme-phosphorus-label",
+				"continuum-font-scheme-serif-label",
+				"continuum-font-scheme-sans-serif-label"
 			],
 			"dependencies": [
 				"mediawiki.api",

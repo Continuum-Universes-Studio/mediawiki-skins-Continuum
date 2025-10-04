@@ -4,7 +4,7 @@
 	},
 	"skinname-continuum": "Continuum",
 	"continuum-specialversion-name": "Continuum",
-	"continuum-skin-desc": "Provides 2 Continuum skins:\n* Continuum is a fork of Continuum with some an alternate color scheme and some decorative additions.",
+	"continuum-skin-desc": "Continuum is a fork of Vector with a color theme system, many underhood changes, removal of Vector's Theme System, and some decorative additions. It is essentially a completely new skin.",
 	"continuum-opt-out": "Switch to old look",
 	"continuum-opt-out-tooltip": "Change your settings to go back to the old look of the skin (legacy Continuum)",
 	"continuum.css": "/* All CSS here will be loaded for users of the Continuum skin */",

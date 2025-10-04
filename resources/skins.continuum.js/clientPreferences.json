@@ -15,4 +15,9 @@
 		"preferenceKey": "continuum-theme",
 		"type": "radio"
 	}
+	,"continuum-font-scheme": {
+		"options": [ "metamorphous", "opendyslexic", "monospace", "phosphorus", "serif", "sans-serif", "antiqua", "celtica", "germanica", "medieval" ],
+		"preferenceKey": "continuum-font-scheme",
+		"type": "radio"
+	}
 }

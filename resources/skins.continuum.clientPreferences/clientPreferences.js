@@ -156,6 +156,13 @@
 			toRemove.forEach( ( c ) => body.classList.remove( c ) );
 			body.classList.add( 'theme-' + value );
 		}
+		if ( featureName === 'continuum-font-scheme' ) {
+			// remove existing font-scheme-* on body, then add
+			const toRemove = [];
+			body.classList.forEach( ( c ) => { if ( c.indexOf( 'font-scheme-' ) === 0 ) toRemove.push( c ); } );
+			toRemove.forEach( ( c ) => body.classList.remove( c ) );
+			body.classList.add( 'font-scheme-' + value );
+		}
 
 		// Emit event and resize for layout scripts
 		const payload = { feature: featureName, value };
@@ -167,7 +174,13 @@
 			window.dispatchEvent( ev );
 		}
 		window.dispatchEvent( new Event( 'resize' ) );
-
+		try {
+			window.dispatchEvent( new CustomEvent( 'continuum:font-scheme-changed', { detail: {}, bubbles: true } ) );
+		} catch ( e ) {
+			const ev = document.createEvent( 'CustomEvent' );
+			ev.initCustomEvent( 'continuum:font-scheme-changed', true, true, {} );
+			window.dispatchEvent( ev );
+		}
 		// Persist
 		if ( mw.user.isNamed && mw.user.isNamed() ) {
 			mw.util.debounce( () => {

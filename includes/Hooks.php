@@ -560,6 +560,24 @@ class Hooks implements
 			],
 			'hide-if' => [ '!==', 'skin', 'continuum' ],
 			],
+			'font-scheme' => [
+				'type' => 'select',
+				'label-message' => 'continuum-font-scheme-label',
+				'section' => 'rendering/skin/skin-prefs',
+				'options-messages' => [
+					'continuum-font-scheme-serif'  => 'serif',
+					'continuum-font-scheme-sans' => 'sans-serif',
+					'continuum-font-scheme-monospace'  => 'monospace',
+					'continuum-font-scheme-medieval'  => 'medieval',
+					'continuum-font-scheme-metamorphous'  => 'metamorphous',
+					'continuum-font-scheme-phosphorus'  => 'phosphorus',
+					'continuum-font-scheme-celtica'  => 'celtica',
+					'continuum-font-scheme-germanica'  => 'germanica',
+					'continuum-font-scheme-opendyslexic'  => 'opendyslexic',
+					'continuum-font-scheme-antiqua'  => 'antiqua',
+				],
+				'hide-if' => [ '!==', 'skin', 'continuum' ],
+			],
 
 		] );
 		$continuumPrefs = [
