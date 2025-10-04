@@ -71,7 +71,14 @@ class SkinContinuum extends SkinMustache {
 		} else {
 			$classes[] = "theme-imperial-night";
 		}
+		$fontscheme = $this->getUser()->getOption( 'continuum-font-scheme', 'metamorphous' );
 
+		$validFontSchemes = [ 'metamorphous', 'opendyslexic', 'monospace', 'phosphorus', 'serif', 'sans-serif', 'antiqua', 'celtica', 'germanica', 'medieval' ];
+		if ( in_array( $fontscheme, $validFontSchemes, true ) ) {
+			$classes[] = "font-scheme-$fontscheme";
+		} else {
+			$classes[] = "font-scheme-metamorphous";
+		}
 		return $classes;
 	}
 
@@ -297,6 +304,14 @@ class SkinContinuum extends SkinMustache {
 			$original['class'] .= ' theme-' . $theme;
 		} else {
 			$original['class'] .= ' theme-imperial-night';
+		}
+		$fontscheme = $userOptionsManager->getOption( $this->getUser(), 'continuum-font-scheme', 'metamorphous' );
+
+		$validFontSchemes = [ 'metamorphous', 'opendyslexic', 'monospace', 'phosphorus', 'serif', 'sans-serif', 'antiqua', 'celtica', 'germanica', 'medieval' ];
+		if ( in_array( $fontscheme, $validFontSchemes, true ) ) {
+			$original['class'] .= ' font-scheme-' . $fontscheme;
+		} else {
+			$original['class'] .= ' font-scheme-metamorphous';
 		}
 
 		$original['class'] = trim( $original['class'] );
