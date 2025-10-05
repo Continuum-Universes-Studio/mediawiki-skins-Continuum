@@ -1,113 +1,613 @@
-@import '../variables.less';
+@import "../variables.less";
 
-.profile-tab {
-    background-color: @bg-alt;
-    font-size: @font-size-medium;
-    text-align: center;
-    height: 22px;
-    min-width: 72px;
-    float: left;
-    padding: 12px 4px;
-    border: 2px solid @accent-alt;
-    border-radius: 8px;
-    margin: 0 5px 0 0;
+/**************************************
+ * ContinuumProfile — User page styling
+ * Scope: User namespace only
+ **************************************/
+body.ns-2 {
+    --cp-muted: #777;
+    --cp-quiet: #666;
+    --cp-border: #dcdcdc;
+    --cp-border-soft: #e2e2e2;
+    --cp-soft: #fafbfc;
+    --cp-note: #f2f4f7;
+    --cp-note-2: #eff3f0;
+    --cp-accent: #ffa500;
+    --cp-level: #c00;
+    --cp-badge: #444;
+    --cp-sysop: #d33;
+    --cp-loremaster-supreme: #007bff;
+    --cp-loremaster: #429dc1;
+    --cp-contributor: #28a745;
+    --cp-editor: #17a2b8;
+    --cp-author: #ffc107;
+    --cp-helper: #20c997;
+    --cp-veteran: #fd7e14;
+    --cp-bureaucrat: #6c757d;
+    --cp-forgemaster: #95d135;
+    --cp-grand-forgemaster: #00791e;
+    --cp-heading: @text-base;
 }
-.profile-tab-on {
-    background-color: @accent-alt;
-    text-align: center;
-    font-size: @font-size-medium;
-    height: 22px;
-    min-width: 72px;
-    float: left;
-    padding: 12px 4px;
-    border: 2px solid @accent-hover;
-    border-radius: 8px;
-    margin: 0 5px 0 0;
-}
-.profile-on {
-    color: @color-white;
-    font-family: @font-body !important;
-    font-size: @font-size-medium;
-    background-color: @accent-alt;
-    border: 2px solid @accent-hover;
-    border-radius: 8px;
-    padding: 10px;
-}
-.user-gift-container {
 
-    img {
-        background: transparent;
-        border: 1px solid @accent-primary;
-        border-radius: 12px;
-        padding: 4px;
+/* = Title */
+body.ns-2 .firstHeading {
+    display: none;
+}
+body.ns-2 {
+    color: @text-base !important;
+}
+body.ns-2 .pagetitle {
+    display: inline !important;
+}
+body.ns-2 
+/* = Layout (Grid w/ Flex fallback) */
+body.ns-2 #main {
+    display: grid !important;
+    grid-template-columns: minmax(270px, 35%) minmax(320px, 1fr);
+    gap: 2vw;
+    align-items: start;
+    padding: 0;
+}
+
+@supports not (display: grid) {
+    body.ns-2 #main {
+        display: flex !important;
+        flex-wrap: wrap;
+        gap: 2vw;
     }
 }
-.profile-info-container {
-    background-color: @bg-alt;
-    color: @color-white;
-    border: 1px solid @accent-alt;
-    border-radius: 12px;
-    padding: 24px !important;
-    b {
-        color: @accent-hover;
+
+body.ns-2 #user-page-left,
+body.ns-2 #user-page-right {
+    box-sizing: border-box;
+    padding-inline: 1em;
+    float: none !important;
+    width: auto !important;
+    max-width: none !important;
+}
+
+body.ns-2 #user-page-left {
+    grid-column: 1;
+    min-inline-size: 270px;
+}
+
+body.ns-2 #user-page-right {
+    grid-column: 2;
+    min-inline-size: 320px;
+}
+
+@media (max-width: 900px) {
+    body.ns-2 #main {
+        grid-template-columns: 1fr !important;
     }
-    div {
-        color: @color-white;
+
+    body.ns-2 #user-page-left,
+    body.ns-2 #user-page-right {
+        padding: 0;
     }
 }
-.listpages-blurb-size-small {
-    font-size: @font-size-small;
-    line-height: 1.4;
-    color: @color-white;
-    font-family: @font-body !important;
-    padding: 12px;
+
+/* = Section headings */
+body.ns-2 #user-page-left h2,
+body.ns-2 #user-page-right h2,
+body.ns-2 .user-section-heading {
+    border-block-end: 1px solid @accent-alt;
+    padding-block-end: 3px;
+    margin-block: 0 8px;
+    font-size: 1.1em;
+    color: @accent-primary;
+    letter-spacing: -0.02em;
 }
-.user-board-message {
-    border: 1px solid @accent-primary;
-    border-radius: 0.4em;
-    margin-block-end: 1em;
-    background: @bg-panel;
-    padding: 0.6em;
+
+body.ns-2 .user-section-heading {
     display: flex;
-    gap: 1em;
+    justify-content: space-between;
+    align-items: center;
 }
-.user-board-message-from {
-    background-color: @bg-alt;
-    padding: 3px 0 5px 5px;
+
+body.ns-2 .user-section-title {
+    font-size: 1.25em;
+    padding-inline-end: 0.5em;
 }
-.no-info-container, .no-pictures-container {
-    margin-block: 0.7em 1.3em;
-    background: @bg-alt;
-    padding: 1.3em;
+
+body.ns-2 .user-section-actions {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+
+body.ns-2 .user-section-actions a {
+    text-decoration: none;
+}
+
+body.ns-2 .item-small {
+    color: @text-subtle;
+    font-size: 0.7em;
+    margin-inline-start: 0.4em;
+}
+
+/* = Profile top: avatar + name/tagline inline */
+body.ns-2 #profile-top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: @bg-panel;
+    border-block-end: 1px solid @accent-alt;
+    padding-block: 0.75em;
+    margin-block-end: 0.75em;
+}
+
+body.ns-2 #profile-toggle-button {
+    position: absolute;
+    inset-block-start: 0.7em;
+    inset-inline-end: 0.7em;
+    background: @bg-button;
+    color: @text-base;
+    padding: 0.2em 0.7em;
+    font-weight: 700;
+    border-radius: 0.4em;
+    text-decoration: none;
+}
+
+body.ns-2 #profile-toggle-button a {
+    color: @text-base;
+    text-decoration: none;
+}
+
+body.ns-2 #profile-title-container {
+    display: flex !important;
+    align-items: center;
+    gap: 1.5em;
+}
+
+/* Avatar BIGGER */
+body.ns-2 #profile-image {
+    position: relative;
+    margin-inline-end: 1em;
+}
+
+body.ns-2 #profile-image img {
+    inline-size: 150px;
+    block-size: 150px;
+    object-fit: cover;
+    border-radius: 0.6em;
+    background: @text-base;
+    border: 2px solid var(--cp-border);
+    padding: 4px;
+}
+
+body.ns-2 #profile-image p {
+    font-size: 75%;
+    margin: 0 auto;
     text-align: center;
-    color: @accent-alt;
-    border-radius: 0.7em;
 }
-.usergroup-badge {
-    background: rgba(255, 255, 255, 0.0);
+
+/* Username + tagline next to avatar (stacked) */
+body.ns-2 .sp-username {
+    margin: 0 !important;
+    font-size: 2.2em;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+body.ns-2 .sp-username .sp-user-aka {
+    margin-inline-start: 0.35em;
+    font-size: 28px;
+    font-style: italic;
+    color: @text-subtle;
+    opacity: 1.0 !important;
+}
+
+body.ns-2 .user-profile-tagline {
+    margin: 0.3em 0 0;
+    font-size: 1.1em;
+    font-style: italic;
     color: @text-subtle;
 }
-#profile-toggle-button {
-    background-color: @bg-button;
-    color: var(--color-white);
-    border: 1px solid @accent-alt;
+body.ns-2 .user-subsection-header {
+    font-size: @font-size-heading-3;
+    font-weight: bold;
+    color: @accent-alt !important;
+    margin: 10px 0px 5px 0px;
+    border-bottom: 1px solid @accent-alt !important;
+    padding: 0px 0px 3px 0px;
+}
+/* Level & honorific chips */
+body.ns-2 #points-level,
+body.ns-2 #honorific-level {
+    display: inline-block;
+    margin-block-start: 4px;
+    margin-inline-end: 0.5em;
+}
+
+body.ns-2 #points-level {
+    background: var(--cp-level);
+    color: @text-base;
+    font: 700 0.8em/1 system-ui, sans-serif;
+    padding: 0.2em 0.7em;
+    border-radius: 0.4em;
+}
+
+body.ns-2 #points-level a {
+    color: @text-base;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+body.ns-2 #honorific-level {
+    font-size: 0.85em;
+}
+
+body.ns-2 #honorific-level a {
+    text-decoration: none;
+}
+
+/* Thumbnails */
+body.ns-2 .user-relationship-container img,
+body.ns-2 .user-gift-container img {
+    background: @bg-alt;
+    padding: 4px;
     border-radius: 8px;
-    font-family: @font-monospace;
-    font-size: @font-size-medium;
-    padding: 8px 16px;
-    cursor: pointer;
+    border: 1px solid @accent-primary;
+    padding: 3px;
+}
 
-    &:hover {
-        background-color: @accent-primary;
-        color: @accent-hover;
-        border-color: @accent-alt;
-        box-shadow: inset 0 0 0 1px @accent-alt, inset 0 0 0 2px @accent-primary;
-    }
+/* = Activity */
+body.ns-2 .activity-item {
+    border-block-end: 1px solid var(--cp-border);
+    padding-block: 7px;
+}
 
-    &:active {
-        background-color: @accent-hover;
-        color: @color-inverted;
-        border-color: @accent-alt;
-        box-shadow: inset 0 0 0 1px @accent-alt, inset 0 0 0 2px @accent-hover;
-    }
+body.ns-2 .activity-item-bottom {
+    padding-block-start: 7px;
+}
+
+body.ns-2 .activity-item img,
+body.ns-2 .activity-item-bottom img {
+    vertical-align: middle;
+    margin-inline-end: 5px;
+}
+
+body.ns-2 .activity-item a,
+body.ns-2 .activity-item-bottom a {
+    text-decoration: none;
+}
+
+body.ns-2 .item {
+    color: @text-subtle;
+    margin: 5px 25px;
+}
+
+body.ns-2 .item a {
+    font-weight: 700;
+}
+
+body.ns-2 #recent-all {
+    padding-block-end: 25px;
+}
+
+/* = Message board */
+body.ns-2 #user-page-board {
+    margin-block: 0.3em 0.6em;
+}
+
+body.ns-2 .user-page-message-form,
+body.ns-2 .user-page-message-form-blocked {
+    margin-block: 0.3em 1em;
+    font-weight: 700;
+}
+
+body.ns-2 .user-page-message-form-blocked {
+    color: #f00;
+}
+
+body.ns-2 .user-board-message {
+    display: flex;
+    gap: 1em;
+    background: var(--cp-soft);
+    border: 1px solid var(--cp-border-soft);
+    border-radius: 0.4em;
+    padding: 0.6em;
+    margin-block-end: 1em;
+}
+
+body.ns-2 .user-board-message-image {
+    padding: 0;
+    margin: 0;
+}
+
+body.ns-2 .user-board-message-image img {
+    inline-size: 48px;
+    block-size: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--cp-border);
+}
+
+body.ns-2 .user-board-message-from {
+    background: #F8F5F5;
+    padding: 3px 0 5px 5px;
+}
+
+body.ns-2 .user-board-message-from a {
+    font: 700 14px/1.2 system-ui, sans-serif;
+    text-decoration: none;
+}
+
+body.ns-2 .user-board-message-content {
+    padding: 5px;
+}
+
+body.ns-2 .user-board-message-time {
+    color: #797979;
+    font-size: 11px;
+    margin: 2px 0 0 5px;
+}
+
+body.ns-2 .user-board-message-body {
+    flex: 1 1 0;
+    margin: 0;
+}
+
+body.ns-2 .user-board-message-body p {
+    margin: 0 !important;
+}
+
+body.ns-2 .user-board-message-links {
+    padding: 0 0 5px 5px;
+}
+
+body.ns-2 .user-board-message-links a {
+    font-size: 11px;
+    text-decoration: none;
+    margin-inline-end: 10px;
+}
+
+body.ns-2 .user-board-red a {
+    color: #f00;
+}
+
+/* = Profile data */
+body.ns-2 .profile-info-container {
+    padding-block-end: 17px;
+}
+
+body.ns-2 .profile-info-container b {
+    color: #555;
+    margin-inline-end: 10px;
+}
+
+body.ns-2 .profile-info-container div {
+    margin-block-end: 8px;
+    color: @text-subtle;
+}
+
+body.ns-2 .bold-fix b {
+    margin-inline-end: 5px !important;
+}
+
+/* = Collections */
+body.ns-2 .user-gift-container,
+body.ns-2 .user-fanbox-container,
+body.ns-2 .user-relationship-container,
+body.ns-2 .casual-game-container,
+body.ns-2 .user-articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding-block-end: 1.5em;
+}
+
+body.ns-2 .user-gift-container,
+body.ns-2 .user-relationship-container {
+    gap: 0.5em 1em;
+}
+
+body.ns-2 .user-gift-container a,
+body.ns-2 .user-relationship-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 0;
+}
+
+body.ns-2 .casual-game-container p {
+    border-block-start: 1px solid var(--cp-border);
+    padding-block: 7px !important;
+    margin: 0 !important;
+}
+
+body.ns-2 .casual-game-container .item-top {
+    border: 0;
+}
+
+body.ns-2 .casual-game-container a {
+    font-weight: 700;
+    text-decoration: none;
+}
+
+body.ns-2 .casual-game-container .item-type {
+    font-size: 9px;
+    margin-inline-start: 6px;
+}
+
+body.ns-2 .casual-game-container img {
+    border: 1px solid var(--cp-border);
+    padding: 3px;
+    background: @text-base;
+    vertical-align: middle;
+    margin-inline-end: 3px;
+}
+
+/* = Articles */
+body.ns-2 .article-item {
+    margin: 0;
+    padding: 7px 0 2px 0;
+    border-block-start: 1px solid var(--cp-border);
+}
+
+body.ns-2 .user-articles-container a {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+body.ns-2 .article-item-top {
+    margin: 0;
+    padding: 7px 0 2px 0;
+    border: none;
+}
+
+body.ns-2 .vote-number {
+    background: #89c46f;
+    color: @text-base;
+    font-size: 12px !important;
+    font-weight: 700;
+    block-size: 25px;
+    line-height: 25px;
+    margin-block-end: 2px;
+}
+
+body.ns-2 .vote-text {
+    color: @text-alt;
+    font-size: 9px;
+    line-height: 9px;
+    margin: -1px 0 0 0;
+}
+
+/* = Pictures */
+body.ns-2 .picture-container-spacer {
+    block-size: 25px;
+    inline-size: 100%;
+}
+
+body.ns-2 .picture-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em 1em;
+}
+
+body.ns-2 .picture-container .mini-image {
+    margin: 0;
+}
+
+body.ns-2 .picture-container img {
+    inline-size: 70px;
+    block-size: 70px;
+    object-fit: cover;
+    border-radius: 0.4em;
+    background: @text-base;
+    border: 1px solid var(--cp-border);
+    padding: 3px;
+}
+
+body.ns-2 .picture-container a {
+    text-decoration: none;
+}
+
+/* = Uploads + notices */
+body.ns-2 .upload-container {
+    clear: inline-start;
+    block-size: 90px;
+    margin-inline-start: -5px;
+}
+
+body.ns-2 .upload-frame-errors {
+    display: none;
+}
+
+body.ns-2 .imageUpload-frame {
+    block-size: 90px;
+    inline-size: 425px;
+}
+
+body.ns-2 .no-info-container,
+body.ns-2 .no-pictures-container {
+    margin-block: 0.7em 1.3em;
+    padding: 1.3em;
+    text-align: center;
+    color: @text-alt;
+    border-radius: 0.7em;
+}
+
+body.ns-2 .no-info-container {
+    background: @accent-secondary;
+}
+
+body.ns-2 .no-pictures-container {
+    background: @accent-alt;
+}
+
+/* = Badges */
+body.ns-2 .usergroup-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-block-start: 4px;
+    max-inline-size: 100%;
+}
+
+body.ns-2 .usergroup-badge {
+    display: inline-block;
+    font-size: 14px;
+    padding: 2px 6px;
+    border-radius: 6px;
+    background: var(--cp-badge);
+    color: @text-base;
+    white-space: nowrap;
+}
+
+body.ns-2 #profile-title-container {
+    display: flex !important;
+    align-items: center;
+    gap: 1.5em;
+}
+
+body.ns-2 #profile-image img {
+    width: 150px !important;
+    height: 150px !important;
+    object-fit: cover;
+}
+
+body.ns-2 .usergroup-badge {
+    display: inline-block;
+    font-size: 14px;
+    padding: 2px 6px;
+    border-radius: 6px;
+    background: var(--cp-badge);
+    color: @text-base;
+    white-space: nowrap;
+}
+body.ns-2 .usergroup-badge.group-sysop {
+    background: var(--cp-sysop);
+}
+body.ns-2 .usergroup-badge.group-loremaster-supreme {
+    background: var(--cp-loremaster-supreme);
+}
+body.ns-2 .usergroup-badge.group-loremaster {
+    background: var(--cp-loremaster);
+}
+body.ns-2 .usergroup-badge.group-contributor {
+    background: var(--cp-contributor);
+}
+body.ns-2 .usergroup-badge.group-editor {
+    background: var(--cp-editor);
+}
+body.ns-2 .usergroup-badge.group-author {
+    background: var(--cp-author);
+}
+body.ns-2 .usergroup-badge.group-helper {
+    background: var(--cp-helper);
+}
+body.ns-2 .usergroup-badge.group-veteran {
+    background: var(--cp-veteran);
+}
+body.ns-2 .usergroup-badge.group-bureaucrat {
+    background: var(--cp-bureaucrat);
+}
+body.ns-2 .usergroup-badge.group-forgemaster {
+    background: var(--cp-forgemaster);
+}
+body.ns-2 .usergroup-badge.group-grand-forgemaster {
+    background: var(--cp-grand-forgemaster);
 }
