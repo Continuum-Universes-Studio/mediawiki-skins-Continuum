@@ -186,14 +186,14 @@ body.ns-2 #profile-image p {
 /* Username + tagline next to avatar (stacked) */
 body.ns-2 .sp-username {
     margin: 0 !important;
-    font-size: 2.2em;
+    font-size: 48px;
     font-weight: 700;
     line-height: 1.2;
 }
 
 body.ns-2 .sp-username .sp-user-aka {
     margin-inline-start: 0.35em;
-    font-size: 28px;
+    font-size: 24px;
     font-style: italic;
     color: @text-subtle;
     opacity: 1.0 !important;
@@ -201,7 +201,7 @@ body.ns-2 .sp-username .sp-user-aka {
 
 body.ns-2 .user-profile-tagline {
     margin: 0.3em 0 0;
-    font-size: 1.1em;
+    font-size: 16px;
     font-style: italic;
     color: @text-subtle;
 }
@@ -610,4 +610,22 @@ body.ns-2 .usergroup-badge.group-forgemaster {
 }
 body.ns-2 .usergroup-badge.group-grand-forgemaster {
     background: var(--cp-grand-forgemaster);
+}
+body.ns-2 .usergroup-badge.group-dev-team {
+    background: var(--cp-grand-forgemaster);
+}
+.profile-on {
+    background-color: @bg-light !important;
+    border: @accent-primary 1px solid !important;
+    font-weight: bold;
+}
+.profile-tab {
+    background-color: @bg-button !important;
+    border: @accent-alt 1px solid !important;
+    font-weight: normal;
+}
+.profile-tab-on {
+    background-color: @bg-light !important;
+    border: @accent-alt 1px solid !important;
+    font-weight: normal;
 }

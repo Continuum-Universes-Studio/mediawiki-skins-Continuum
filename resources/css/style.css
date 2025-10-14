@@ -2377,7 +2377,6 @@ body:not(.ve-active) .portable-infobox {
 nav {
     display: block; /* Ensure it behaves as a block element */
     /*margin: 10px 0;  Add vertical spacing */
-    padding-left: 10px;
     margin-top: 10px; /* Add vertical spacing */
     border-radius: 5px; /* Optional: rounded corners */
 }

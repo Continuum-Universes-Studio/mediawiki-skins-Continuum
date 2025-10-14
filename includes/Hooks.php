@@ -560,7 +560,7 @@ class Hooks implements
 			],
 			'hide-if' => [ '!==', 'skin', 'continuum' ],
 			],
-			'font-scheme' => [
+			'continuum-font-scheme' => [
 				'type' => 'select',
 				'label-message' => 'continuum-font-scheme-label',
 				'section' => 'rendering/skin/skin-prefs',
