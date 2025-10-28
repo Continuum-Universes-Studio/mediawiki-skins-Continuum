@@ -12,6 +12,15 @@ textarea {
 	width: 100% !important;
 	display: block;
 }
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: @font-monospace;
+	font-size: @font-size-medium;
+	background-color: @bg-light !important;
+}
 /* your normal styles (kept) */
 input.mw-userlogin-username,
 input.mw-userlogin-password,
@@ -297,4 +306,9 @@ select {
 	color: @text-subtle;
 	border: 1px solid @accent-alt !important;
 	border-radius: 8px;
+}
+textarea#wpBio {
+	border: 1px solid @accent-alt !important;
+	border-radius: 8px;
+	background-color: @bg-light !important;
 }
