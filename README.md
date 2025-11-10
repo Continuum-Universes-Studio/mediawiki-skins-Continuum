@@ -4,7 +4,7 @@ Continuum Skin
 Installation
 ------------
 
-See <https://www.mediawiki.org/wiki/Skin:Continuum>.
+See <https://continuum-universes.com/wiki/Skin:Continuum>.
 
 ### Configuration options
 
