@@ -1,9 +1,10 @@
 {
 	"name": "Continuum forked from Vector",
-	"version": "3.0.0",
+	"version": "3.0.5",
 	"author": [
 		"Christian Daniel Jensen",
-		"Thanks to Onika, Anita, and ChatGPT for instructions"
+		"Thanks to Onika, Anita, and ChatGPT for instructions",
+		"Thank you to the Original Creators of Vector Skin"
 	],
 	"url": "https://git.continuum-universes.com/jensen-saga-studio/mediawiki-skin-continuum",
 	"descriptionmsg": "continuum-skin-desc",
@@ -13,6 +14,7 @@
 	"requires": {
 		"MediaWiki": ">= 1.43"
 	},
+	"callback": "MediaWiki\\Skins\\Continuum\\SkinContinuumHooks::onRegistration",
 	"attributes": {
 		"DarkMode": {
 			"Disabled": [
@@ -36,7 +38,7 @@
 					"template": "skin",
 					"tempUserBanner": true,
 					"responsive": true,
-					"toc": true,
+					"toc": false,
 					"link": {
 						"text-wrapper": {
 							"tag": "span"
@@ -184,6 +186,14 @@
 				"CdxButton",
 				"CdxRadio",
 				"CdxMessage"
+			]
+		},
+		"ext.continuum.mermaidTheme": {
+			"scripts": [
+				"resources/ext.continuum.mermaidTheme.js"
+			],
+			"dependencies": [
+				"ext.mermaid"
 			]
 		},
 		"skins.continuum.search.codex.scripts": {
@@ -445,6 +455,19 @@
 				"resources/skins.continuum.js/fontsize-compat.js"
 			],
 			"targets": [ "desktop" ]
+		},
+		"skins.continuum.emojipicker": {
+			"scripts": [
+				"resources/emoji-picker/emoji-button.min.js",
+				"resources/emoji-picker/init.js"
+			],
+			"styles": [
+				"resources/emoji-picker/emoji-picker.less"
+			],
+			"targets": [
+				"desktop",
+				"mobile"
+			]
 		}
 	},
 

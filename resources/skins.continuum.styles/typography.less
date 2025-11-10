@@ -499,8 +499,28 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
-
+@font-face {
+	font-family: 'Noto Color Emoji';
+	src: url('../fonts/NotoColorEmoji-Regular.woff2') format('woff2');
+	font-display: swap;
+	unicode-range:
+		U+1F300-1FAFF,
+		/* main emoji blocks */
+		U+1F1E6-1F1FF,
+		/* flags (regional indicators) */
+		U+1F3FB-1F3FF,
+		/* skin tones */
+		U+200D,
+		/* ZWJ */
+		U+2640, U+2642,
+		/* gender symbols */
+		U+FE0F,
+		/* VS16 (emoji presentation) */
+		U+20E3,
+		/* keycap combining — harmless to keep */
+		U+E0020-E007E, U+E007F;
+	/* tag sequences for flags */
+}
 
 /*
  * Continuum's common typography rules,

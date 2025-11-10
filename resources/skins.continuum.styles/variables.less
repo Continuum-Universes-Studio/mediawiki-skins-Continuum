@@ -281,13 +281,13 @@
 
 @icon-color: var(--icon-color);
 
-
+@font-emoji: 'Noto Color Emoji';
 /* Font schemes 
     Mapped to CSS variables defined in font-schemes/font-scheme-*.less files
     and used throughout the skin.
 */
-@font-body: var(--font-body);
-@font-heading: var(--font-heading);
-@font-monospace: var(--font-monospace);
-@font-alt: var(--font-alt);
-@font-special: var(--font-special);
+@font-body: @font-emoji, var(--font-body);
+@font-heading: @font-emoji, var(--font-heading);
+@font-monospace: @font-emoji, var(--font-monospace);
+@font-alt: @font-emoji, var(--font-alt);
+@font-special: @font-emoji, var(--font-special);

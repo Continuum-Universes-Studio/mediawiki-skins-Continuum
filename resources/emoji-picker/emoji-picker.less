@@ -1,0 +1,39 @@
+/* Tiny icon button that sits near inputs / textareas */
+.cu-emoji-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    cursor: pointer;
+    border: 1px solid var(--border-color, rgba(255, 255, 255, .12));
+    background: var(--panel-bg, rgba(255, 255, 255, .04));
+    padding: .25rem .5rem;
+    border-radius: .5rem;
+    font-size: .9em;
+    line-height: 1;
+    user-select: none;
+    transition: background .15s ease, border-color .15s ease;
+    margin-left: .5rem;
+}
+
+.cu-emoji-trigger:hover {
+    background: rgba(255, 255, 255, .08);
+    border-color: rgba(255, 255, 255, .2);
+}
+
+.cu-emoji-trigger .cu-emoji-icon {
+    font-size: 1.1em;
+}
+
+/* Keep the picker above dialogs/toolbars */
+.cu-emoji-layer {
+    z-index: 10010;
+    /* above VE toolbar & dialogs */
+}
+
+/* Ensure in text flows nicely */
+textarea.cu-has-emoji,
+input[type="text"].cu-has-emoji,
+[contenteditable="true"].cu-has-emoji {
+    caret-color: currentColor;
+}

@@ -1,0 +1,63 @@
+.generator-content {
+    background: @bg-panel !important;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 20px @shadow-color;
+    div {
+        margin-bottom: 20px;
+        background: @bg-light !important;
+    }
+}
+.generator-card {
+    background: @bg-panel !important;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 8px 25px @shadow-color;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid @accent-alt;
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 30px @shadow-color;
+    }
+    p {
+        font-size: 1.1em;
+        color: @text-subtle;
+        font-family: @font-monospace;
+    }
+}
+.card-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+    font-family: @font-heading;
+}
+.generator-history {
+    background: @bg-light !important;
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 30px;
+    p {
+        font-size: 1em;
+        color: @text-base;
+        font-family: @font-body;
+    }
+}
+.generator-button {
+    display: inline-block;
+    background: @bg-button !important;
+    color: @text-base !important;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-family: @font-heading;
+    text-decoration: none;
+    box-shadow: 0 5px 15px @shadow-color;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    &:hover {
+        background: @accent-alt !important;
+        box-shadow: 0 8px 20px @shadow-color;
+    }
+    &:visited {
+        color: @text-base !important;
+    }
+}
