@@ -300,7 +300,7 @@
     padding-right: 23px;
 }
 .oo-ui-tagMultiselectWidget-handle .oo-ui-tagMultiselectWidget-group > input {
-    background-color: transparent;
+    background-color: @bg-panel !important;
     color: @text-base !important;
     box-sizing: border-box;
     height: 2.14285716em;
@@ -318,4 +318,56 @@
 }
 .oo-ui-labelElement-label {
     color: @text-base !important;
+}
+.oo-ui-tagMultiselectWidget-handle {
+    border: none !important;
+}
+.oo-ui-tagItemWidget.oo-ui-widget-disabled {
+    background-color: @bg-button !important;
+    color: @text-subtle !important;
+    border-color: @accent-alt;
+    text-shadow: 0 1px 1px @shadow-color;
+}
+.oo-ui-inputWidget:last-child {
+    max-width: 100% !important;
+}
+.oo-ui-textInputWidget .oo-ui-inputWidget-input {
+    max-width: 100% !important;
+}
+.oo-ui-textInputWidget.oo-ui-widget-enabled .oo-ui-inputWidget-input {
+    max-width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+}
+body.ns-special .mw-rcfilters-ui-filterWrapper,
+body.ns-special .mw-rcfilters-ui-formWrapper,
+body.ns-special .mw-rcfilters-ui-filterMenuLayout,
+body.ns-special .oo-ui-layout,
+body.ns-special .oo-ui-fieldLayout-field,
+body.ns-special .oo-ui-widget {
+    min-width: 0;
+    /* critical for flex children: allow shrinking */
+    max-width: 100%;
+    /* never exceed page content width */
+    box-sizing: border-box;
+}
+body.ns-special .oo-ui-textInputWidget,
+body.ns-special .oo-ui-textInputWidget .oo-ui-inputWidget-input {
+    width: 100%;
+    max-width: 100%;
+}
+.mw-rcfilters-ui-filterMenuSectionOptionWidget {
+    background-color: @bg-alt !important;
+}
+.mw-rcfilters-ui-filterMenuOptionWidget.oo-ui-flaggedElement-muted:not(.oo-ui-optionWidget-selected) {
+    background-color: @bg-alt !important;
+}
+.oo-ui-widget.oo-ui-optionWidget-selected .oo-ui-fieldLayout-body .oo-ui-fieldLayout-field {
+    background-color: @bg-light !important;
+}
+.oo-ui-menuOptionWidget.oo-ui-widget-enabled.oo-ui-optionWidget {
+    color: @text-base !important;
+}
+.mw-rcfilters-ui-itemMenuOptionWidget-label-desc {
+    color: @text-subtle !important;
 }

@@ -55,3 +55,23 @@ textarea#wpNewBio {
     border: 1px solid @accent-alt;
     border-radius: 0 0 2px 2px;
 }
+/* Keep RecentChanges table from overflowing horizontally */
+.mw-body .mw-changeslist {
+    overflow-x: auto;
+    /* allow horizontal scroll instead of breaking layout */
+}
+
+/* Make the table respect the content width */
+.mw-changeslist table {
+    max-width: 100%;
+    width: 100%;
+    table-layout: dynamic;
+    /* helps long columns behave */
+}
+
+/* Wrap long titles/links instead of forcing the table wide */
+.mw-changeslist .mw-body-content td,
+.mw-changeslist .mw-body-content th {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
