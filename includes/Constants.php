@@ -318,6 +318,18 @@ final class Constants {
 	/**
 	 * @var string
 	 */
+	public const THEME_SODAHAN = 'sodahan';
+	/**
+	 * @var string
+	 */
+	public const THEME_BALORIAN = 'balorian';
+	/**
+	 * @var string
+	 */
+	public const THEME_SLUGGO = 'sluggo';
+	/**
+	 * @var string
+	 */
 	public const THEME_WIKIPEDIA_DEFAULT = 'wikipedia-default';
 	/**
 	 * @var string

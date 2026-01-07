@@ -100,6 +100,9 @@
 	"continuum-theme-kristens-curations": "Kristen's Curations",
 	"continuum-theme-ectoplasm-purple": "Ectoplasm (Purple)",
 	"continuum-theme-ectoplasm-green": "Ectoplasm (Green)",
+	"continuum-theme-sodahan": "Sodahan",
+	"continuum-theme-balorian": "Balorian",
+	"continuum-theme-sluggo": "Sluggo",
 	"continuum-theme-saved": "Theme set to $1.",
 	"continuum-theme-applied-temp": "Theme applied (this device): $1.",
 	"continuum-theme-wikipedia-default-label": "Wikipedia Default (blue/white)",
@@ -112,6 +115,9 @@
 	"continuum-theme-ectoplasm-purple-label": "Ectoplasm (purple/yellow)",
 	"continuum-theme-ectoplasm-green-label": "Ectoplasm (green/orange)",
 	"continuum-theme-kristens-curations-label": "Kristen's Curations (pink/teal)",
+	"continuum-theme-sodahan-label": "Sodahan (misty teal/sand)",
+	"continuum-theme-balorian-label": "Balorian (midnight indigo/azure)",
+	"continuum-theme-sluggo-label": "Sluggo (moss/seafoam)",
 	"wikipedia-default": "Wikipedia",
 	"wikipedia-darkmode": "Wikipedia Dark",
 	"imperial-night": "Imperial Night",
@@ -121,6 +127,9 @@
 	"adams-chaos": "Adam's Chaos",
 	"ectoplasm-purple": "Ectoplasm (Purple)",
 	"ectoplasm-green": "Ectoplasm (Green)",
-	"kristens-curations": "Kristen's Curations"
+	"kristens-curations": "Kristen's Curations",
+	"sodahan": "Sodahan",
+	"balorian": "Balorian",
+	"sluggo": "Sluggo"
 }
 	

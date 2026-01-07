@@ -1,0 +1,120 @@
+/* === Sluggo === */
+body.skin-continuum.theme-sluggo {
+  /* Core palette */
+  --bg-panel:       #594b4a;
+  --bg-main:        #536967;
+  --bg-alt:         #5b8175;
+  --bg-interactive: #5c9782;
+  --bg-light:       #5eb591;
+  --bg-button:      #71ddb7;
+
+  /* Type */
+  --text-base:      #deece6;
+  --text-subtle:    #b0ead7;
+  --text-alt:       #ceece2;
+  --text-accent:    #71ddb7;
+  --text-error:     #71ddb7;
+  --text-hover:     #ffffff;
+
+  /* Accents */
+  --accent-primary:   #71ddb7;
+  --accent-secondary: #68ceab;
+  --accent-hover:     #ceece2;
+  --accent-active:    #deece6;
+  --accent-alt:       #5eb591;
+  --accent-danger:    #71ddb7;
+  --accent-gold:      #b0ead7;
+  --accent-light:     #deece6;
+
+  /* Links */
+  --link:           var(--accent-primary);
+  --link-hover:     var(--accent-hover);
+  --link-active:    var(--accent-active);
+  --link-alt:       var(--accent-alt);
+  --link-visited:   #b0ead7;
+
+  /* Status */
+  --status-success: #5eb591;
+  --status-warning: #68ceab;
+  --status-error:   #71ddb7;
+  --status-notice:  #5c9782;
+
+  /* Borders */
+  --border:         #5b8175;
+  --border-hover:   #5c9782;
+  --border-active:  #5eb591;
+  --border-error:   #71ddb7;
+  --border-warning: #68ceab;
+  --border-notice:  #5c9782;
+
+  /* Code */
+  --code-bg:               #594b4a;
+  --code-bg-highlight:     #536967;
+  --code-identifier:       #deece6;
+  --code-number:           #71ddb7;
+  --code-string:           #ceece2;
+  --code-keyword:          #b0ead7;
+  --code-comment:          #5c9782;
+  --code-function:         #deece6;
+  --code-function-builtin: #ceece2;
+  --code-variable:         #deece6;
+  --code-operator:         #71ddb7;
+  --code-constant:         #b0ead7;
+  --code-type:             #68ceab;
+  --code-class:            #deece6;
+  --code-interface:        #deece6;
+  --code-def:              #71ddb7;
+  --code-template:         #68ceab;
+  --code-parser-function:  #ceece2;
+  --code-html-attribute:   #71ddb7;
+  --code-link-brackets:    #5c9782;
+  --code-link-pagename:    #b0ead7;
+  --code-link-text:        #deece6;
+  --code-exttag:           #5c9782;
+  --code-exttag-attribute: #68ceab;
+  --code-exttag-name:      #71ddb7;
+  --code-exttag-brackets:  #5c9782;
+  --code-section-header:   #71ddb7;
+  --code-underline:        #deece6;
+  --code-other:            #deece6;
+  --code-list:             #68ceab;
+  --code-tag:              #71ddb7;
+  --code-attribute:        #ceece2;
+  --code-language:         #68ceab;
+  --code-glow:             rgba(113, 221, 183, 0.2);
+
+  --cursor-color:  var(--accent-primary);
+  --icon-color:    var(--text-base);
+
+  /* mermaid colors */
+  --cu-surface: var(--bg-panel);
+  --cu-surface-alt: var(--bg-alt);
+  --cu-text: var(--text-base);
+  --cu-muted: var(--text-subtle);
+  --cu-primary-700: var(--accent-primary);
+  --cu-accent: var(--accent-secondary);
+  --cu-border: var(--border);
+}
+
+.theme-sluggo .mw-ui-icon,
+.theme-sluggo .mw-ui-icon-element .mw-ui-icon {
+  background-color: var(--icon-color) !important;
+  color: var(--icon-color) !important;
+}
+
+.theme-sluggo a:hover .mw-ui-icon,
+.theme-sluggo .oo-ui-buttonWidget:hover .oo-ui-iconElement-icon {
+  filter: drop-shadow(0 0 6px rgba(113, 221, 183, 0.35));
+}
+
+.theme-sluggo .cdx-icon,
+.theme-sluggo .cdx-button .cdx-icon,
+.theme-sluggo .cdx-menu__icon {
+  color: var(--icon-color);
+}
+
+.theme-sluggo svg,
+.theme-sluggo .ct-icon svg {
+  color: var(--icon-color);
+}
+.theme-sluggo svg [fill="#000"] { fill: var(--icon-color) !important; }
