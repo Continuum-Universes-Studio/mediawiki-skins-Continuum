@@ -10,7 +10,7 @@
 	"continuum-theme": {
 		"options": ["imperial-night", "ubla-day", "ubla-night", "verdant", 
 			"adams-chaos", "ectoplasm-purple", "ectoplasm-green", "kristens-curations",
-			"wikipedia-default", "wikipedia-darkmode"
+			"sodahan", "balorian", "sluggo", "wikipedia-default", "wikipedia-darkmode"
 		],
 		"preferenceKey": "continuum-theme",
 		"type": "radio"

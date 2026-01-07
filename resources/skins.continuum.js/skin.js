@@ -114,7 +114,7 @@ function main( window ) {
         // Inline fallback — keep this synchronized with your PHP ThemeManager
         return {
             'continuum-theme': {
-                options: [ 'imperial-night', 'ubla-day', 'ubla-night', 'verdant', 'adams-chaos', 'ectoplasm-purple', 'ectoplasm-green', 'kristens-curations', 'wikipedia-default', 'wikipedia-darkmode' ],
+                options: [ 'imperial-night', 'ubla-day', 'ubla-night', 'verdant', 'adams-chaos', 'ectoplasm-purple', 'ectoplasm-green', 'kristens-curations', 'sodahan', 'balorian', 'sluggo', 'wikipedia-default', 'wikipedia-darkmode' ],
                 preferenceKey: 'continuum-theme',
                 betaMessage: false,
                 type: 'radio'

@@ -1,0 +1,120 @@
+/* === Sodahan === */
+body.skin-continuum.theme-sodahan {
+  /* Core palette */
+  --bg-panel:       #0a2d2e;
+  --bg-main:        #1c4e4f;
+  --bg-alt:         #436e6f;
+  --bg-interactive: #6a8e8f;
+  --bg-light:       #879693;
+  --bg-button:      #deae9f;
+
+  /* Type */
+  --text-base:      #f7ebe7;
+  --text-subtle:    #a49e97;
+  --text-alt:       #efd7cf;
+  --text-accent:    #deae9f;
+  --text-error:     #deae9f;
+  --text-hover:     #ffffff;
+
+  /* Accents */
+  --accent-primary:   #deae9f;
+  --accent-secondary: #a49e97;
+  --accent-hover:     #efd7cf;
+  --accent-active:    #f7ebe7;
+  --accent-alt:       #879693;
+  --accent-danger:    #deae9f;
+  --accent-gold:      #efd7cf;
+  --accent-light:     #f7ebe7;
+
+  /* Links */
+  --link:           var(--accent-primary);
+  --link-hover:     var(--accent-hover);
+  --link-active:    var(--accent-active);
+  --link-alt:       var(--accent-alt);
+  --link-visited:   #a49e97;
+
+  /* Status */
+  --status-success: #6a8e8f;
+  --status-warning: #a49e97;
+  --status-error:   #deae9f;
+  --status-notice:  #879693;
+
+  /* Borders */
+  --border:         #436e6f;
+  --border-hover:   #6a8e8f;
+  --border-active:  #879693;
+  --border-error:   #deae9f;
+  --border-warning: #a49e97;
+  --border-notice:  #879693;
+
+  /* Code */
+  --code-bg:              #0a2d2e;
+  --code-bg-highlight:    #1c4e4f;
+  --code-identifier:      #f7ebe7;
+  --code-number:          #deae9f;
+  --code-string:          #efd7cf;
+  --code-keyword:         #a49e97;
+  --code-comment:         #879693;
+  --code-function:        #f7ebe7;
+  --code-function-builtin:#efd7cf;
+  --code-variable:        #f7ebe7;
+  --code-operator:        #deae9f;
+  --code-constant:        #efd7cf;
+  --code-type:            #a49e97;
+  --code-class:           #f7ebe7;
+  --code-interface:       #f7ebe7;
+  --code-def:             #deae9f;
+  --code-template:        #a49e97;
+  --code-parser-function: #efd7cf;
+  --code-html-attribute:  #deae9f;
+  --code-link-brackets:   #879693;
+  --code-link-pagename:   #a49e97;
+  --code-link-text:       #f7ebe7;
+  --code-exttag:          #879693;
+  --code-exttag-attribute:#a49e97;
+  --code-exttag-name:     #deae9f;
+  --code-exttag-brackets: #879693;
+  --code-section-header:  #deae9f;
+  --code-underline:       #f7ebe7;
+  --code-other:           #f7ebe7;
+  --code-list:            #a49e97;
+  --code-tag:             #deae9f;
+  --code-attribute:       #efd7cf;
+  --code-language:        #a49e97;
+  --code-glow:            rgba(222, 174, 159, 0.15);
+
+  --cursor-color:  var(--accent-primary);
+  --icon-color:    var(--text-base);
+
+  /* mermaid colors */
+  --cu-surface: var(--bg-panel);
+  --cu-surface-alt: var(--bg-alt);
+  --cu-text: var(--text-base);
+  --cu-muted: var(--text-subtle);
+  --cu-primary-700: var(--accent-primary);
+  --cu-accent: var(--accent-secondary);
+  --cu-border: var(--border);
+}
+
+.theme-sodahan .mw-ui-icon,
+.theme-sodahan .mw-ui-icon-element .mw-ui-icon {
+  background-color: var(--icon-color) !important;
+  color: var(--icon-color) !important;
+}
+
+.theme-sodahan a:hover .mw-ui-icon,
+.theme-sodahan .oo-ui-buttonWidget:hover .oo-ui-iconElement-icon {
+  filter: drop-shadow(0 0 6px rgba(222, 174, 159, 0.35));
+}
+
+.theme-sodahan .cdx-icon,
+.theme-sodahan .cdx-button .cdx-icon,
+.theme-sodahan .cdx-menu__icon {
+  color: var(--icon-color);
+}
+
+.theme-sodahan svg,
+.theme-sodahan .ct-icon svg {
+  color: var(--icon-color);
+}
+.theme-sodahan svg [fill="#000"] { fill: var(--icon-color) !important; }

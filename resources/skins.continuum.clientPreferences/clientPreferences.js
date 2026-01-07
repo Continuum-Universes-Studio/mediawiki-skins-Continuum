@@ -18,6 +18,9 @@
 		'ectoplasm-purple': ['#413256', '#A3B745'],
 		'ectoplasm-green': ['#003f03ff', '#00ff22'],
 		'kristens-curations': ['#EBC9B1', '#0D4013'],
+		'sodahan': ['#0a2d2e', '#deae9f'],
+		'balorian': ['#1d0e2c', '#5e87f5'],
+		'sluggo': ['#594b4a', '#71ddb7'],
 		'wikipedia-default': ['#ffffff', '#2f6bdaff'],
 		'wikipedia-darkmode': ['#202122', '#025badff']
 	};
