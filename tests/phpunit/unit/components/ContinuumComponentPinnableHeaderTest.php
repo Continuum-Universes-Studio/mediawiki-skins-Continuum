@@ -19,17 +19,17 @@
  * @since 1.42
  */
 
-namespace MediaWiki\Skins\Continuum\Tests\Unit\Components;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Unit\Components;
 
 use MediaWiki\Message\Message;
-use MediaWiki\Skins\Continuum\Components\ContinuumComponentPinnableHeader;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentPinnableHeader;
 use MediaWikiUnitTestCase;
 use MessageLocalizer;
 
 /**
  * @group Continuum
  * @group Components
- * @coversDefaultClass \MediaWiki\Skins\Continuum\Components\ContinuumComponentPinnableHeader
+ * @coversDefaultClass \ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentPinnableHeader
  */
 class ContinuumComponentPinnableHeaderTest extends MediaWikiUnitTestCase {
 

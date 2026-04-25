@@ -1,14 +1,14 @@
 <?php
 
-namespace MediaWiki\Skins\Continuum\Tests\Integration;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Integration;
 
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Request\FauxRequest;
-use MediaWiki\Skins\Continuum\ConfigHelper;
+use ContinuumUniverses\Skins\Continuum\ConfigHelper;
 use MediaWiki\Title\Title;
 
 /**
- * @coversDefaultClass \MediaWiki\Skins\Continuum\ConfigHelper
+ * @coversDefaultClass \ContinuumUniverses\Skins\Continuum\ConfigHelper
  */
 class ConfigHelperTest extends \MediaWikiIntegrationTestCase {
 	/**

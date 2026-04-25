@@ -1,17 +1,18 @@
 <?php
 
-namespace MediaWiki\Skins\Continuum;
+namespace ContinuumUniverses\Skins\Continuum;
 
 use MediaWiki\Auth\Hook\LocalUserCreatedHook;
 use MediaWiki\Config\Config;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Preferences\Hook\GetPreferencesHook;
+use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\ResourceLoader as RL;
 use MediaWiki\Skins\Hook\SkinPageReadyConfigHook;
-use MediaWiki\Skins\Continuum\Hooks\HookRunner;
+use ContinuumUniverses\Skins\Continuum\Hooks\HookRunner;
 use MediaWiki\User\Options\UserOptionsManager;
-use MediaWiki\Skins\Continuum\Constants;
+use ContinuumUniverses\Skins\Continuum\Constants;
 use MediaWiki\User\User;
 use RuntimeException;
 use SkinTemplate;
@@ -50,6 +51,7 @@ class Hooks implements
 			$skinName === Constants::SKIN_NAME_MODERN
 		);
 	}
+	
     public static function onSkinBuildSidebar( Skin $skin, array &$bar ): bool {
         if ( !$skin->getUser()->isRegistered() ) {
             $msg = wfMessage( 'guestsidebar' )->inContentLanguage();
@@ -100,7 +102,7 @@ class Hooks implements
 		return $ab;
 	}
 
-	/**
+		/**
 	 * Generates config variables for skins.continuum.search Resource Loader module (defined in
 	 * skin.json).
 	 *
@@ -112,15 +114,45 @@ class Hooks implements
 		RL\Context $context,
 		Config $config
 	): array {
-		$continuumSearchConfig = [
+		$useWikibaseSearchCompatibility = false;
+		$continuumTypeahead = $config->get( 'ContinuumTypeahead' );
+		$legacySearchApiUrl = $config->get( 'ContinuumSearchApiUrl' );
+		$legacySearchOptions = $config->get( 'ContinuumWvuiSearchOptions' );
+		$additionalSearchOptions = [
 			'highlightQuery' =>
 				ContinuumServices::getLanguageService()->canWordsBeSplitSafely( $context->getLanguage() )
 		];
 
 		$hookRunner = new HookRunner( MediaWikiServices::getInstance()->getHookContainer() );
-		$hookRunner->onContinuumSearchResourceLoaderConfig( $continuumSearchConfig );
+		$hookRunner->onContinuumSearchResourceLoaderConfig( $additionalSearchOptions );
 
-		return array_merge( $config->get( 'ContinuumWvuiSearchOptions' ), $continuumSearchConfig );
+		if (
+			( ( $continuumTypeahead['apiUrl'] ?? null ) === null ||
+				( $continuumTypeahead['apiUrl'] ?? '' ) === '' ) &&
+			$legacySearchApiUrl !== ''
+		) {
+			$continuumTypeahead['apiUrl'] = $legacySearchApiUrl;
+		}
+
+		$continuumTypeahead['options'] = array_merge(
+			$legacySearchOptions,
+			$continuumTypeahead['options'] ?? [],
+			$additionalSearchOptions
+		);
+
+		if (
+			ExtensionRegistry::getInstance()->isLoaded( 'WikibaseRepository' ) &&
+			class_exists( \Wikibase\Repo\WikibaseRepo::class )
+		) {
+			$useWikibaseSearchCompatibility =
+				\Wikibase\Repo\WikibaseRepo::getSettings()->getSetting( 'enableEntitySearchUI' ) === true;
+		}
+
+		return [
+			'ContentNamespaces' => $config->get( 'ContentNamespaces' ),
+			'ContinuumTypeahead' => $continuumTypeahead,
+			'useWikibaseSearchCompatibility' => $useWikibaseSearchCompatibility,
+		];
 	}
 
 	/**
@@ -148,7 +180,7 @@ class Hooks implements
 		// and from its point of view they are the same thing.
 		// Please see the modules `skins.continuum.js` and `skins.continuum.legacy.js`
 		// for the wire up of search.
-		$config['search'] = false;
+		$config['searchModule'] = 'skins.continuum.search';
 	}
 
 	/**

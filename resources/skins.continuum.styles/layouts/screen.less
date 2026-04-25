@@ -1,13 +1,10 @@
 /**
- * Continuum modern layout styles for screen
+ * continuum 2022 (formerly "continuum modern") layout styles for screen
  *
- * Layout rules divide the page into sections and how ContinuumComponents should be arranged in the skin.
+ * Layout rules divide the page into sections and how continuumComponents should be arranged
+ * in the skin.
  * The rules here should only define the layout, not color or typography.
  */
-
-html {
-	scroll-padding-top: @scroll-padding-top;
-}
 
 body {
 	background-color: @background-color-secondary--modern;
@@ -37,6 +34,18 @@ body {
 /* Content */
 .mw-indicators {
 	z-index: @z-index-indicators;
+}
+
+.mw-heading {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		// T314419 - See the comment on the LESS variable
+		scroll-margin-top: @scroll-margin-heading;
+	}
 }
 
 .continuum-page-titlebar {
@@ -101,7 +110,7 @@ body {
 .mw-page-container {
 	.mixin-continuum-page-container-sizing();
 	// Setting position and z-index is important as it allows overlays appended to the body tag
-	// to position themselves over the Continuum interface. This forms another stacking context for
+	// to position themselves over the continuum interface. This forms another stacking context for
 	// elements placed inside this element
 	position: relative;
 	z-index: @z-index-base;
@@ -111,18 +120,8 @@ body {
 	padding-top: 0.05px;
 	padding-left: @padding-horizontal-page-container;
 	padding-right: @padding-horizontal-page-container;
-	background-color: @background-color-page-container;
-}
-
-@media ( max-width: @max-width-breakpoint-mobile ) {
-	.continuum-header {
-		flex-flow: column;
-	}
-
-	.continuum-header-start,
-	.continuum-header-end {
-		width: 100%;
-	}
+	background: @bg-body;
+	background-attachment: fixed;
 }
 
 @media ( min-width: @min-width-breakpoint-desktop ) {
@@ -169,7 +168,7 @@ body {
 }
 
 // Address issues with INP: T358380
-// This can be removed if Continuum 2022 ever becomes responsive.
+// This can be removed if continuum 2022 ever becomes responsive.
 // More information:
 // https://developer.chrome.com/blog/300ms-tap-delay-gone-away?hl=en
 html {

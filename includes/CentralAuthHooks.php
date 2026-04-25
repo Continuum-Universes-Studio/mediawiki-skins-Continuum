@@ -1,6 +1,6 @@
 <?php
 
-namespace MediaWiki\Skins\Continuum;
+namespace ContinuumUniverses\Skins\Continuum;
 
 use MediaWiki\Extension\CentralAuth\Hooks\CentralAuthIsUIReloadRecommendedHook;
 use MediaWiki\User\Options\UserOptionsLookup;

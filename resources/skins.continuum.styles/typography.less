@@ -522,6 +522,12 @@
 	/* tag sequences for flags */
 }
 
+@font-face {
+	font-family: 'Continuum Icons';
+	src: url('../fonts/ContinuumIcons-Regular.woff2') format('woff2');
+	font-display: swap;
+	/* unicode-range: ~"U+F000-U+F043"; */
+}
 /*
  * Continuum's common typography rules,
  * including whitespace with `margin` & `padding` and list bullets
@@ -711,4 +717,14 @@ pre,
 	font-size: @font-size-small; // T311421
 	// By default the sitesub (i.e. tagline) is hidden as it was hidden in Continuum legacy but site styles can reveal.
 	display: none;
+}
+.cu-icon::before {
+  font-family: @font-icons !important;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  display: inline-block;
+}
+.cu-icon-blueelf::before {
+  content: "\F038";
 }

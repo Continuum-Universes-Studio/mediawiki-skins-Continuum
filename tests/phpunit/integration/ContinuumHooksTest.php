@@ -4,17 +4,17 @@
  * @ingroup skins
  */
 
-namespace MediaWiki\Skins\Continuum\Tests\Integration;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Integration;
 
 use MediaWiki\Config\HashConfig;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Request\FauxRequest;
 use MediaWiki\ResourceLoader\Context;
-use MediaWiki\Skins\Continuum\Constants;
-use MediaWiki\Skins\Continuum\FeatureManagement\Requirements\LimitedWidthContentRequirement;
-use MediaWiki\Skins\Continuum\Hooks;
-use MediaWiki\Skins\Continuum\SkinContinuum22;
-use MediaWiki\Skins\Continuum\SkinContinuumLegacy;
+use ContinuumUniverses\Skins\Continuum\Constants;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements\LimitedWidthContentRequirement;
+use ContinuumUniverses\Skins\Continuum\Hooks;
+use ContinuumUniverses\Skins\Continuum\SkinContinuum22;
+use ContinuumUniverses\Skins\Continuum\SkinContinuumLegacy;
 use MediaWiki\Title\Title;
 use MediaWiki\User\Options\UserOptionsManager;
 use MediaWiki\User\User;
@@ -26,7 +26,7 @@ use RuntimeException;
  * Integration tests for Continuum Hooks.
  *
  * @group Continuum
- * @coversDefaultClass \MediaWiki\Skins\Continuum\Hooks
+ * @coversDefaultClass \ContinuumUniverses\Skins\Continuum\Hooks
  */
 class ContinuumHooksTest extends MediaWikiIntegrationTestCase {
 
@@ -160,6 +160,72 @@ class ContinuumHooksTest extends MediaWikiIntegrationTestCase {
 				]
 			],
 		];
+	}
+
+	/**
+	 * @covers ::getContinuumSearchResourceLoaderConfig
+	 */
+	public function testGetContinuumSearchResourceLoaderConfig() {
+		$config = new HashConfig( [
+			'ContentNamespaces' => [ NS_MAIN ],
+			'ContinuumSearchApiUrl' => 'https://en.wikipedia.org/w/rest.php',
+			'ContinuumTypeahead' => [
+				'apiUrl' => null,
+				'recommendationApiUrl' => '/w/rest.php/v1/search/page?q=$1&limit=20',
+				'options' => [
+					'showThumbnail' => true,
+					'showDescription' => false,
+				],
+			],
+			'ContinuumWvuiSearchOptions' => [
+				'showThumbnail' => false,
+				'showDescription' => true,
+			],
+		] );
+		$context = $this->createMock( Context::class );
+		$context->method( 'getLanguage' )
+			->willReturn( 'en' );
+
+		$searchConfig = Hooks::getContinuumSearchResourceLoaderConfig(
+			$context,
+			$config
+		);
+		$typeaheadConfig = $searchConfig['ContinuumTypeahead'];
+
+		$this->assertSame(
+			[ NS_MAIN ],
+			$searchConfig['ContentNamespaces']
+		);
+		$this->assertSame(
+			'https://en.wikipedia.org/w/rest.php',
+			$typeaheadConfig['apiUrl']
+		);
+		$this->assertSame(
+			'/w/rest.php/v1/search/page?q=$1&limit=20',
+			$typeaheadConfig['recommendationApiUrl']
+		);
+		$this->assertIsBool( $searchConfig['useWikibaseSearchCompatibility'] );
+		$this->assertTrue( $typeaheadConfig['options']['showThumbnail'] );
+		$this->assertFalse( $typeaheadConfig['options']['showDescription'] );
+		$this->assertIsBool( $typeaheadConfig['options']['highlightQuery'] );
+	}
+
+	/**
+	 * @covers ::onSkinPageReadyConfig
+	 */
+	public function testOnSkinPageReadyConfigUsesContinuumSearchModule() {
+		$hook = new Hooks(
+			new HashConfig( [] ),
+			$this->createMock( UserOptionsManager::class )
+		);
+		$context = $this->createMock( Context::class );
+		$context->method( 'getSkin' )
+			->willReturn( Constants::SKIN_NAME_MODERN );
+		$pageReadyConfig = [];
+
+		$hook->onSkinPageReadyConfig( $context, $pageReadyConfig );
+
+		$this->assertSame( 'skins.continuum.search', $pageReadyConfig['searchModule'] );
 	}
 
 	/**
@@ -310,9 +376,9 @@ class ContinuumHooksTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @todo move into MediaWiki\Skins\Continuum\FeatureManagement\Requirements\LimitedWidthContentRequirement
+	 * @todo move into ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements\LimitedWidthContentRequirement
 	 *  test in future.
-	 * @covers MediaWiki\Skins\Continuum\FeatureManagement\Requirements\LimitedWidthContentRequirement::isMet
+	 * @covers ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements\LimitedWidthContentRequirement::isMet
 	 * @dataProvider providerShouldDisableMaxWidth
 	 */
 	public function testShouldDisableMaxWidth(

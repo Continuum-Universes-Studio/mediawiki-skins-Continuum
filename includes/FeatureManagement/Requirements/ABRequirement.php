@@ -20,14 +20,14 @@
  * @since 1.35
  */
 
-namespace MediaWiki\Skins\Continuum\FeatureManagement\Requirements;
+namespace ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements;
 
 use MediaWiki\Config\Config;
-use MediaWiki\Skins\Continuum\FeatureManagement\Requirement;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirement;
 use MediaWiki\User\UserIdentity;
 
 /**
- * @package MediaWiki\Skins\Continuum\FeatureManagement\Requirements
+ * @package ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements
  * @internal
  */
 class ABRequirement implements Requirement {

@@ -19,16 +19,16 @@
  * @file
  */
 
-namespace MediaWiki\Skins\Continuum\FeatureManagement\Requirements;
+namespace ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements;
 
 use MediaWiki\Request\WebRequest;
-use MediaWiki\Skins\Continuum\FeatureManagement\Requirement;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirement;
 use MediaWiki\Title\Title;
 use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\UserIdentity;
 
 /**
- * @package MediaWiki\Skins\Continuum\FeatureManagement\Requirements
+ * @package ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements
  */
 final class UserPreferenceRequirement implements Requirement {
 

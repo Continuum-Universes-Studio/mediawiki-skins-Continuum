@@ -1,10 +1,10 @@
 {
-	"name": "Continuum forked from Vector",
+	"name": "Continuum forked from Continuum",
 	"version": "3.0.5",
 	"author": [
 		"Christian Daniel Jensen",
 		"Thanks to Onika, Anita, and ChatGPT for instructions",
-		"Thank you to the Original Creators of Vector Skin"
+		"Thank you to the Original Creators of Continuum Skin"
 	],
 	"url": "https://git.continuum-universes.com/jensen-saga-studio/mediawiki-skin-continuum",
 	"descriptionmsg": "continuum-skin-desc",
@@ -14,7 +14,7 @@
 	"requires": {
 		"MediaWiki": ">= 1.43"
 	},
-	"callback": "MediaWiki\\Skins\\Continuum\\SkinContinuumHooks::onRegistration",
+	"callback": "ContinuumUniverses\\Skins\\Continuum\\SkinContinuumHooks::onRegistration",
 	"attributes": {
 		"DarkMode": {
 			"Disabled": [
@@ -24,7 +24,7 @@
 	},
 	"ValidSkinNames": {
 		"continuum": {
-			"class": "MediaWiki\\Skins\\Continuum\\SkinContinuum",
+			"class": "ContinuumUniverses\\Skins\\Continuum\\SkinContinuum",
 			"services": [
 				"LanguageConverterFactory",
 				"Continuum.FeatureManagerFactory"
@@ -132,11 +132,11 @@
 		]
 	},
 	"AutoloadNamespaces": {
-		"MediaWiki\\Skins\\Continuum\\": "includes/"
+		"ContinuumUniverses\\Skins\\Continuum\\": "includes/"
 	},
 	"TestAutoloadNamespaces": {
-		"MediaWiki\\Skins\\Continuum\\": "includes/",
-		"MediaWiki\\Skins\\Continuum\\Tests\\": "tests/phpunit/"
+		"ContinuumUniverses\\Skins\\Continuum\\": "includes/",
+		"ContinuumUniverses\\Skins\\Continuum\\Tests\\": "tests/phpunit/"
 	},
 	"DefaultUserOptions": {
 		"continuum-limited-width": 1,
@@ -150,13 +150,13 @@
 	},
 	"HookHandlers": {
 		"ContinuumCentralAuthHooks": {
-			"class": "MediaWiki\\Skins\\Continuum\\CentralAuthHooks",
+			"class": "ContinuumUniverses\\Skins\\Continuum\\CentralAuthHooks",
 			"services": [
 				"UserOptionsLookup"
 			]
 		},
 		"ContinuumHooks": {
-			"class": "MediaWiki\\Skins\\Continuum\\Hooks",
+			"class": "ContinuumUniverses\\Skins\\Continuum\\Hooks",
 			"services": [
 				"MainConfig",
 				"UserOptionsManager"
@@ -169,10 +169,10 @@
 		"LocalUserCreated": "ContinuumHooks",
 		"SkinPageReadyConfig": "ContinuumHooks",
 		"GetBetaFeaturePreferences": "ContinuumHooks",
-    	"SkinBuildSidebar": "MediaWiki\\Skins\\Continuum\\Hooks::onSkinBuildSidebar",
+    	"SkinBuildSidebar": "ContinuumUniverses\\Skins\\Continuum\\Hooks::onSkinBuildSidebar",
 		"BeforePageDisplay": [
-			"MediaWiki\\Skins\\Continuum\\ThemeHooks::onBeforePageDisplay",
-			"MediaWiki\\Skins\\Continuum\\FontSchemeHooks::onBeforePageDisplay"
+			"ContinuumUniverses\\Skins\\Continuum\\ThemeHooks::onBeforePageDisplay",
+			"ContinuumUniverses\\Skins\\Continuum\\FontSchemeHooks::onBeforePageDisplay"
 		]
 	},
 	"@note": "When modifying skins.continuum.styles definition, make sure the installer still works",
@@ -209,25 +209,20 @@
 		"skins.continuum.search": {
 			"dependencies": [
 				"web2017-polyfills",
+				"mediawiki.api",
 				"mediawiki.util",
-				"skins.continuum.search.codex.scripts"
+				"mediawiki.skinning.typeaheadSearch"
+			],
+			"messages": [
+				"parentheses"
 			],
 			"packageFiles": [
 				"resources/skins.continuum.search/skins.continuum.search.js",
-				"resources/skins.continuum.search/instrumentation.js",
-				"resources/skins.continuum.search/fetch.js",
-				"resources/skins.continuum.search/restSearchClient.js",
-				"resources/skins.continuum.search/urlGenerator.js",
-				"resources/skins.continuum.search/App.vue",
+				"resources/skins.continuum.search/wikibaseCompatSearchClient.js",
 				{
-					"name": "resources/skins.continuum.search/config.json",
-					"callback": "MediaWiki\\Skins\\Continuum\\Hooks::getContinuumSearchResourceLoaderConfig"
+					"name": "resources/skins.continuum.search/searchConfig.json",
+					"callback": "ContinuumUniverses\\Skins\\Continuum\\Hooks::getContinuumSearchResourceLoaderConfig"
 				}
-			],
-			"messages": [
-				"searchbutton",
-				"searchresults",
-				"continuum-searchsuggest-containing"
 			]
 		},
 		"skins.continuum.styles": {
@@ -387,7 +382,7 @@
 				"resources/skins.continuum.js/clientPreferences.json",
 				{
 					"name": "resources/skins.continuum.js/activeABTest.json",
-					"callback": "MediaWiki\\Skins\\Continuum\\Hooks::getActiveABTest"
+					"callback": "ContinuumUniverses\\Skins\\Continuum\\Hooks::getActiveABTest"
 				},
 				{
 					"name": "resources/skins.continuum.js/config.json",
@@ -418,7 +413,6 @@
 				"resources/skins.continuum.js/tables.js",
 				"resources/skins.continuum.js/languageButton.js",
 				"resources/skins.continuum.js/echo.js",
-				"resources/skins.continuum.js/searchLoader.js",
 				"resources/skins.continuum.js/menuTabs.js"
 			],
 			"dependencies": [
@@ -561,6 +555,17 @@
 		},
 		"ContinuumUseIconWatch": {
 			"value": true
+		},
+		"ContinuumTypeahead": {
+			"value": {
+				"apiUrl": null,
+				"recommendationApiUrl": null,
+				"options": {
+					"showThumbnail": true,
+					"showDescription": true
+				}
+			},
+			"description": "apiUrl - To override the default search API, set this to the URL to rest.php on another wiki. Can be used with $wgDisableTextSearch and $wgSearchForwardUrl to mimic user experience on production. recommendationApi - Provides a recommendation service. $1 will be substituted with pagetitle e.g. '/w/rest.php/v1/search/page?q=$1&limit=20'"
 		},
 		"ContinuumMaxWidthOptions": {
 			"value": {

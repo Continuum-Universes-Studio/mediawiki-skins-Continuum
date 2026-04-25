@@ -19,18 +19,18 @@
  * @file
  */
 
-namespace MediaWiki\Skins\Continuum\FeatureManagement\Requirements;
+namespace ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements;
 
 use MediaWiki\Config\Config;
 use MediaWiki\Request\WebRequest;
-use MediaWiki\Skins\Continuum\ConfigHelper;
-use MediaWiki\Skins\Continuum\Constants;
-use MediaWiki\Skins\Continuum\FeatureManagement\Requirement;
+use ContinuumUniverses\Skins\Continuum\ConfigHelper;
+use ContinuumUniverses\Skins\Continuum\Constants;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirement;
 use MediaWiki\Title\Title;
 
 /**
  * The `MaxWidthRequirement` for content.
- * @package MediaWiki\Skins\Continuum\FeatureManagement\Requirements
+ * @package ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements
  */
 final class LimitedWidthContentRequirement implements Requirement {
 	private Config $config;

@@ -4,7 +4,6 @@ const languageButton = require( './languageButton.js' ),
 	echo = require( './echo.js' ),
 	initExperiment = require( './AB.js' ),
 	ABTestConfig = require( /** @type {string} */ ( './activeABTest.json' ) ),
-	initSearchLoader = require( './searchLoader.js' ).initSearchLoader,
 	portletsManager = require( './portlets.js' ),
 	dropdownMenus = require( './dropdownMenus.js' ).dropdownMenus,
 	tables = require( './tables.js' ).init,
@@ -52,7 +51,6 @@ function enableCssAnimations( document ) {
  */
 function main( window ) {
 	enableCssAnimations( window.document );
-	initSearchLoader( document );
 	languageButton();
 	echo();
 	portletsManager.main();
@@ -75,8 +73,7 @@ function main( window ) {
 	if ( appearanceMenuExists ) {
 		mw.loader.using( [
 			'skins.continuum.clientPreferences',
-			'skins.continuum.search.codex.styles',
-			'skins.continuum.search.codex.scripts'
+			'skins.continuum.search.codex.styles'
 		] ).then( () => {
 			const clientPreferences = require( /** @type {string} */ ( 'skins.continuum.clientPreferences' ) );
 			const clientPreferenceConfig = ( require( './clientPreferences.json' ) );

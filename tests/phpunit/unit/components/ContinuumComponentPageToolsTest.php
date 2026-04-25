@@ -19,17 +19,17 @@
  * @since 1.35
  */
 
-namespace MediaWiki\Skins\Continuum\Tests\Unit\Components;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Unit\Components;
 
 use MediaWiki\Message\Message;
-use MediaWiki\Skins\Continuum\Components\ContinuumComponentPageTools;
-use MediaWiki\Skins\Continuum\FeatureManagement\FeatureManager;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentPageTools;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\FeatureManager;
 use MessageLocalizer;
 
 /**
  * @group Continuum
  * @group Components
- * @coversDefaultClass \MediaWiki\Skins\Continuum\Components\ContinuumComponentPageTools
+ * @coversDefaultClass \ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentPageTools
  */
 class ContinuumComponentPageToolsTest extends \MediaWikiUnitTestCase {
 	public static function getPinnableHeaderData( $data = [] ) {

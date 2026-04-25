@@ -20,9 +20,9 @@
  * @since 1.35
  */
 
-namespace MediaWiki\Skins\Continuum\FeatureManagement\Requirements;
+namespace ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements;
 
-use MediaWiki\Skins\Continuum\FeatureManagement\Requirement;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirement;
 
 /**
  * NOTE: This API hasn't settled. It may change at any time without warning. Please don't bind to
@@ -30,7 +30,7 @@ use MediaWiki\Skins\Continuum\FeatureManagement\Requirement;
  *
  * @unstable
  *
- * @package MediaWiki\Skins\Continuum\FeatureManagement\Requirements
+ * @package ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements
  * @internal
  */
 class SimpleRequirement implements Requirement {

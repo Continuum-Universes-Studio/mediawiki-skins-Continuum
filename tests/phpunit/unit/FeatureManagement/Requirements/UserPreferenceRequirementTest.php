@@ -1,9 +1,9 @@
 <?php
 
-namespace MediaWiki\Skins\Continuum\Tests\Unit\FeatureManagement\Requirements;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Unit\FeatureManagement\Requirements;
 
 use MediaWiki\Request\FauxRequest;
-use MediaWiki\Skins\Continuum\FeatureManagement\Requirements\UserPreferenceRequirement;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements\UserPreferenceRequirement;
 use MediaWiki\Title\Title;
 use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\UserIdentity;
@@ -11,7 +11,7 @@ use MediaWiki\User\UserIdentity;
 /**
  * @group Continuum
  * @group FeatureManagement
- * @coversDefaultClass \MediaWiki\Skins\Continuum\FeatureManagement\Requirements\UserPreferenceRequirement
+ * @coversDefaultClass \ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements\UserPreferenceRequirement
  */
 final class UserPreferenceRequirementTest extends \MediaWikiUnitTestCase {
 	public static function providerTestIsMetRequirement() {

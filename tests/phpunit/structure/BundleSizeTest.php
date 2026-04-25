@@ -1,6 +1,6 @@
 <?php
 
-namespace MediaWiki\Skins\Continuum\Tests\Structure;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Structure;
 
 class BundleSizeTest extends \MediaWiki\Tests\Structure\BundleSizeTestBase {
 

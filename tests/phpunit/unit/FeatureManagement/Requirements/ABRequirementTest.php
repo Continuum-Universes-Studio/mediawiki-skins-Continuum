@@ -20,17 +20,17 @@
  * @since 1.42
  */
 
-namespace MediaWiki\Skins\Continuum\Tests\Unit\FeatureManagement\Requirements;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Unit\FeatureManagement\Requirements;
 
 use MediaWiki\Config\HashConfig;
-use MediaWiki\Skins\Continuum\FeatureManagement\Requirements\ABRequirement;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements\ABRequirement;
 use MediaWiki\User\UserIdentity;
 use PHPUnit\Framework\TestCase;
 
 /**
  * @group Continuum
  * @group FeatureManagement
- * @coversDefaultClass \MediaWiki\Skins\Continuum\FeatureManagement\Requirements\ABRequirement
+ * @coversDefaultClass \ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements\ABRequirement
  */
 class ABRequirementTest extends TestCase {
 

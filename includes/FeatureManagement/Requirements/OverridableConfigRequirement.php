@@ -19,14 +19,14 @@
  * @file
  */
 
-namespace MediaWiki\Skins\Continuum\FeatureManagement\Requirements;
+namespace ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements;
 
 use MediaWiki\Config\Config;
 use MediaWiki\Extension\BetaFeatures\BetaFeatures;
 use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\Request\WebRequest;
-use MediaWiki\Skins\Continuum\Constants;
-use MediaWiki\Skins\Continuum\FeatureManagement\Requirement;
+use ContinuumUniverses\Skins\Continuum\Constants;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirement;
 use MediaWiki\User\UserIdentity;
 
 /**
@@ -64,7 +64,7 @@ use MediaWiki\User\UserIdentity;
  * NOTE: This API hasn't settled. It may change at any time without warning. Please don't bind to
  * it unless you absolutely need to
  *
- * @package MediaWiki\Skins\Continuum\FeatureManagement\Requirements
+ * @package ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements
  */
 class OverridableConfigRequirement implements Requirement {
 

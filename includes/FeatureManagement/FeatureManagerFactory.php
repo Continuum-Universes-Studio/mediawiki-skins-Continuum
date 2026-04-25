@@ -20,15 +20,15 @@
  * @since 1.42
  */
 
-namespace MediaWiki\Skins\Continuum\FeatureManagement;
+namespace ContinuumUniverses\Skins\Continuum\FeatureManagement;
 
 use MediaWiki\Context\IContextSource;
-use MediaWiki\Skins\Continuum\Constants;
-use MediaWiki\Skins\Continuum\FeatureManagement\Requirements\DynamicConfigRequirement;
-use MediaWiki\Skins\Continuum\FeatureManagement\Requirements\LimitedWidthContentRequirement;
-use MediaWiki\Skins\Continuum\FeatureManagement\Requirements\LoggedInRequirement;
-use MediaWiki\Skins\Continuum\FeatureManagement\Requirements\OverridableConfigRequirement;
-use MediaWiki\Skins\Continuum\FeatureManagement\Requirements\UserPreferenceRequirement;
+use ContinuumUniverses\Skins\Continuum\Constants;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements\DynamicConfigRequirement;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements\LimitedWidthContentRequirement;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements\LoggedInRequirement;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements\OverridableConfigRequirement;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements\UserPreferenceRequirement;
 use MediaWiki\User\Options\UserOptionsLookup;
 
 /**
@@ -36,7 +36,7 @@ use MediaWiki\User\Options\UserOptionsLookup;
  *
  * @unstable
  *
- * @package MediaWiki\Skins\Continuum\FeatureManagement
+ * @package ContinuumUniverses\Skins\Continuum\FeatureManagement
  * @internal
  */
 class FeatureManagerFactory {

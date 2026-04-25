@@ -19,17 +19,17 @@
  * @since 1.42
  */
 
-namespace MediaWiki\Skins\Continuum\Tests\Unit\Components;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Unit\Components;
 
 use MediaWiki\Message\Message;
-use MediaWiki\Skins\Continuum\Components\ContinuumComponentLink;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentLink;
 use MediaWikiUnitTestCase;
 use MessageLocalizer;
 
 /**
  * @group Continuum
  * @group Components
- * @coversDefaultClass \MediaWiki\Skins\Continuum\Components\ContinuumComponentLink
+ * @coversDefaultClass \ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentLink
  */
 class ContinuumComponentLinkTest extends MediaWikiUnitTestCase {
 

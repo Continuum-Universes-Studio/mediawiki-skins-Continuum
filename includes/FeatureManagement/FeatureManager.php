@@ -20,12 +20,12 @@
  * @since 1.35
  */
 
-namespace MediaWiki\Skins\Continuum\FeatureManagement;
+namespace ContinuumUniverses\Skins\Continuum\FeatureManagement;
 
 use MediaWiki\Context\IContextSource;
-use MediaWiki\Skins\Continuum\ConfigHelper;
-use MediaWiki\Skins\Continuum\Constants;
-use MediaWiki\Skins\Continuum\FeatureManagement\Requirements\SimpleRequirement;
+use ContinuumUniverses\Skins\Continuum\ConfigHelper;
+use ContinuumUniverses\Skins\Continuum\Constants;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements\SimpleRequirement;
 use MediaWiki\User\Options\UserOptionsLookup;
 use RuntimeException;
 use Wikimedia\Assert\Assert;
@@ -38,7 +38,7 @@ use Wikimedia\Assert\Assert;
  *
  * @unstable
  *
- * @package MediaWiki\Skins\Continuum\FeatureManagement
+ * @package ContinuumUniverses\Skins\Continuum\FeatureManagement
  * @internal
  * @final
  */

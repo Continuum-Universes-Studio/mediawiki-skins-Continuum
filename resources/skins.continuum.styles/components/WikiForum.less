@@ -7,10 +7,10 @@ th.mw-wikiforum-title, th.mw-wikiforum-value, th.mw-wikiforum-lastpost  {
     border-bottom: 2px solid @accent-active;
 }
 td.mw-wikiforum-title {
-    background-color: var(--color-navy);
-    color: var(--color-white);
+    background-color: @bg-alt;
+    color: @color-white;
 }
-table.mw-wikiforum-frame {
+.mw-wikiforum-frame {
     clear: both;
     width: 100%;
     background: @bg-alt;
@@ -50,4 +50,15 @@ td.mw-wikiforum-value {
     font-family: @font-body;
     font-size: 10px;
     background-color: @bg-alt;
+}
+.mw-wikiforum-searchbox {
+    background: none;
+    border: none;
+    border-radius: 4px;
+}
+label {
+    border-radius: 4px;
+}
+input#mw-wikiforum-searchbox-text {
+    border-radius: 4px;
 }

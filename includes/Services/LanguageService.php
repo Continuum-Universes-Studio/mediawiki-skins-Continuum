@@ -1,6 +1,6 @@
 <?php
 
-namespace MediaWiki\Skins\Continuum\Services;
+namespace ContinuumUniverses\Skins\Continuum\Services;
 
 class LanguageService {
 	/**

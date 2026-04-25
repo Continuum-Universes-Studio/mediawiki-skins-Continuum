@@ -2,7 +2,7 @@
 @import '../typography.less';
 // Importing variables for colors, fonts, and other styles
 body {
-    background-color: @bg-panel; // Main background color
+    background: @bg-body; // Main background color
     color: @text-base;          // Base text color
     font-family: @font-body; // Content font
     margin: 0;
@@ -12,6 +12,7 @@ body {
     font-feature-settings: "liga" 1, "dlig" 1, "clig" 1;
     font-variant-ligatures: common-ligatures discretionary-ligatures contextual;
     font-kerning: normal;
+    background-attachment: fixed;
 }
 .continuum-body {
     // Background color for the body
@@ -21,9 +22,16 @@ body {
     border: 2px solid @accent-primary; // Add a border for emphasis
     border-radius: 8px; // Rounded corners for a modern look
 }
+.theme-ubla-night .continuum-body {
+    .mixin-biolume-breathe();
+}
 .mw-body, .mw-header, .mw-footer-container {
     font-feature-settings: "liga" 1, "dlig" 1, "clig" 1;
     font-variant-ligatures: common-ligatures discretionary-ligatures contextual;
+}
+.mw-content-container, main.mw-body, .continuum-main-menu-container {
+    background: none !important;
+    background-color: transparent !important;
 }
 .localNotice {
     font-family: @font-monospace, 'Courier New', monospace; /* Code font for local notices */
@@ -58,6 +66,9 @@ table {
     border-collapse: collapse; /* Ensures no gaps between table cells */
     width: 100%; /* Full width for tables */
     margin-bottom: 20px; /* Spacing below tables */
+}
+.oo-ui-widget .oo-ui-widget-enabled .oo-ui-labelElement .oo-ui-optionWidget {
+    background-color: @accent-secondary !important;
 }
 .oo-ui-widget .oo-ui-widget-enabled .mw-echo-ui-notificationItemWidget :hover {
     background-color: @bg-alt; /* Soft Peach for hover state */
@@ -110,4 +121,18 @@ ol {
     border-radius: 4px;
     box-shadow: 0 2px 2px 0 @shadow-color;
     background-color: @bg-light;
+}
+a:visited {
+    color: @accent-secondary !important; /* Muted Teal for visited links */
+}
+a:hover {
+    color: @accent-primary !important; /* Bright Orange for hover state */
+}
+.mw-parser-output > p:first-child:has(> br:only-child),
+.mw-parser-output > p:first-child:has(> br:only-child) + p:has(> br:only-child) {
+	display: none;
+}
+
+.mw-empty-elt + p > br:first-child {
+	display: none;
 }

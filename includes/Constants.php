@@ -1,5 +1,5 @@
 <?php
-namespace MediaWiki\Skins\Continuum;
+namespace ContinuumUniverses\Skins\Continuum;
 
 use FatalError;
 

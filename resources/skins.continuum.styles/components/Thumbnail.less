@@ -1,5 +1,8 @@
 @import "../variables.less";
 figure[typeof~='mw:File/Thumb'], figure[typeof~='mw:File/Frame'], figure[typeof~='mw:File/Thumb'] > figcaption {
-    border: 1px solid @accent-primary;
-    background-color: @bg-interactive;
+    border: 1px solid @accent-primary !important;
+    background-color: @bg-panel;
+}
+img[alt='borderless'] {
+    border: 1px solid @accent-alt !important;
 }

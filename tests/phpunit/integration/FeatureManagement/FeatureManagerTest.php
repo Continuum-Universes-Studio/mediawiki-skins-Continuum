@@ -1,12 +1,12 @@
 <?php
 
 use MediaWiki\Context\RequestContext;
-use MediaWiki\Skins\Continuum\Constants;
-use MediaWiki\Skins\Continuum\FeatureManagement\FeatureManager;
+use ContinuumUniverses\Skins\Continuum\Constants;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\FeatureManager;
 use MediaWiki\Title\Title;
 
 /**
- * @coversDefaultClass \MediaWiki\Skins\Continuum\FeatureManagement\FeatureManager
+ * @coversDefaultClass \ContinuumUniverses\Skins\Continuum\FeatureManagement\FeatureManager
  */
 class FeatureManagerTest extends \MediaWikiIntegrationTestCase {
 	private function newFeatureManager(): FeatureManager {

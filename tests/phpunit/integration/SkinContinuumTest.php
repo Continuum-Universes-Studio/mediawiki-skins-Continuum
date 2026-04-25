@@ -1,9 +1,9 @@
 <?php
-namespace MediaWiki\Skins\Continuum\Tests\Integration;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Integration;
 
 use MediaWiki\Cache\LinkCache;
 use MediaWiki\Context\RequestContext;
-use MediaWiki\Skins\Continuum\SkinContinuumLegacy;
+use ContinuumUniverses\Skins\Continuum\SkinContinuumLegacy;
 use MediaWiki\Tests\Unit\Permissions\MockAuthorityTrait;
 use MediaWiki\Title\Title;
 use MediaWiki\User\TalkPageNotificationManager;
@@ -54,7 +54,7 @@ class SkinContinuumTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers \MediaWiki\Skins\Continuum\SkinContinuumLegacy::getTemplateData
+	 * @covers \ContinuumUniverses\Skins\Continuum\SkinContinuumLegacy::getTemplateData
 	 */
 	public function testGetTemplateData() {
 		$this->setService( 'LinkCache', $this->createMock( LinkCache::class ) );

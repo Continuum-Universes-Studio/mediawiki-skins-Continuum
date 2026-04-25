@@ -1,34 +1,58 @@
 /* ================== ÛBLÂ — Night (bioluminescent) ================== */
 body.skin-continuum.theme-ubla-night {
   /* Darker substrate with room for glow */
-  --bg-panel:       #060A18;
-  --bg-main:        #070A14;
-  --bg-alt:         #0B0F1F;
-  --bg-interactive: #0E1430;
-  --bg-light:       #192f4e;   /* lighter surfaces */
-  --bg-button:      #008296;   /* glowing cyan buttons */
+  --bg-panel:         #050A14;
+  --bg-main:          #070B16;
+  --bg-alt:           #0A1324;
+  --bg-interactive:   #0D1B39;
+  --bg-light:         #173354;   /* lighter mountain / sky surfaces */
+  --bg-button:        #1AA6B8;   /* luminous cyan-teal buttons */
+  --bg-body:          radial-gradient(
+                        ellipse at 48% 82%,
+                        rgba(77, 235, 255, 0.18) 0%,
+                        rgba(32, 227, 255, 0.09) 24%,
+                        rgba(7, 10, 20, 0) 56%
+                      ),
+                      radial-gradient(
+                        ellipse at 22% 42%,
+                        rgba(82, 255, 210, 0.13) 0%,
+                        rgba(38, 125, 255, 0.07) 35%,
+                        rgba(7, 10, 20, 0) 64%
+                      ),
+                      radial-gradient(
+                        ellipse at 56% 22%,
+                        rgba(255, 77, 154, 0.11) 0%,
+                        rgba(167, 139, 250, 0.08) 26%,
+                        rgba(7, 10, 20, 0) 58%
+                      ),
+                      linear-gradient(
+                        180deg,
+                        #081326 0%,
+                        var(--bg-main) 46%,
+                        #02040B 100%
+                      );
+  --text-base:        #D8F7FF;
+  --text-subtle:      #8EBFD0;
+  --text-accent:      #7BEFFF;
+  --text-error:       #FF5C9F;
+  --text-hover:       #B7F7FF;
 
-  --text-base:      #D9F8FF;
-  --text-subtle:    #9BC9D5;
-  --text-accent:    #69F7FF;
-  --text-error:     #FF5FA8;
-  --text-hover:     #A8F0FF;
+  --accent-primary:   #4DEBFF;   /* cyan river / bioluminescent glow */
+  --accent-secondary: #2A72D8;   /* deep azure flora / stars */
+  --accent-hover:     #9AF6FF;
+  --accent-active:    #22D6F2;
+  --accent-alt:       #6EADFF;
 
-  /* Biolum palette */
-  --accent-primary: #20E3FF;     /* cyan glow */
-  --accent-secondary: #267dff;   /* azure flora */
-  --accent-hover:   #7BF0FF;
-  --accent-active:  #4DEBFF;
-  --accent-alt:     #6FA8FF;
-  --accent-magenta: #FF4D9A;     /* fungal glow */
-  --accent-violet:  #A78BFA;
-  --accent-light:   #dbc7ff;   /* bright accent */
+  --accent-magenta:   #F05CFF;   /* nebula magenta */
+  --accent-violet:    #8B7CFF;
+  --accent-light:     #DDEBFF;   /* pale planetary ring highlight */
 
   --link:           var(--accent-primary);
   --link-hover:     var(--accent-hover);
   --link-active:    var(--accent-active);
   --link-visited:   #C49BFF;
-
+  --link-new:       #df448c;
+  
   --border:         rgba(32,227,255,.40);
   --border-hover:   rgba(32,227,255,.65);
   --border-active:  rgba(32,227,255,.85);
@@ -92,6 +116,8 @@ body.skin-continuum.theme-ubla-night {
   --glow-line: rgba(32,227,255,.55);  /* the crisp line */
   --glow-soft: rgba(32,227,255,.25);  /* the bloom */
   --glow-outer-shadow: 0 0 0 1px var(--glow-line), 0 0 18px 2px var(--glow-soft);
+	--shadow: 0 0 0 1px var(--glow-line), 0 0 18px 2px var(--glow-soft);
+	--shadow-pulse: 0 0 0 1px var(--glow-line), 0 0 32px 6px var(--glow-soft);
   --icon-color: #2a0036; /* default icon color (can be overridden) */
 
 
@@ -110,7 +136,60 @@ body.skin-continuum.theme-ubla-night {
 .ct-glow {
   box-shadow: var(--glow-cyan, 0 0 0 1px rgba(255,255,255,.08));
 }
+@keyframes continuum-biolume-pulse {
+	0%,
+	100% {
+		opacity: 0.45;
+		transform: scale(1);
+	}
 
+	50% {
+		opacity: 0.9;
+		transform: scale(1.03);
+	}
+}
+@keyframes continuum-biolume-breathe {
+	0%,
+	100% {
+		opacity: 0.35;
+	}
+
+	50% {
+		opacity: 0.75;
+	}
+}
+.mixin-biolume-glow() {
+	position: relative;
+	box-shadow: var(--shadow);
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: -2px;
+		z-index: -1;
+		border-radius: inherit;
+		box-shadow: var(--shadow-pulse);
+		opacity: 0.45;
+		pointer-events: none;
+		animation: continuum-biolume-pulse 4.8s ease-in-out infinite;
+	}
+}
+.mixin-biolume-breathe() {
+	position: relative;
+	box-shadow: var(--shadow);
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: -2px;
+		z-index: -1;
+		border-radius: inherit;
+		box-shadow: var(--shadow-pulse);
+		opacity: 0.45;
+		pointer-events: none;
+		animation: continuum-biolume-breathe 6s ease-in-out infinite;
+	}
+}
 /* animated shimmer for badges/labels */
 @keyframes ublaPulse {
   0%,100% { filter: drop-shadow(0 0 0 rgba(0,0,0,0)); }

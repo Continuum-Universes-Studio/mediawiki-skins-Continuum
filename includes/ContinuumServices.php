@@ -1,8 +1,8 @@
 <?php
 
-namespace MediaWiki\Skins\Continuum;
+namespace ContinuumUniverses\Skins\Continuum;
 
-use MediaWiki\Skins\Continuum\Services\LanguageService;
+use ContinuumUniverses\Skins\Continuum\Services\LanguageService;
 
 /**
  * A service locator for services specific to Continuum.

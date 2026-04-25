@@ -18,18 +18,18 @@
  * @file
  */
 
-namespace MediaWiki\Skins\Continuum\Tests\Unit\FeatureManagement\Requirements;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Unit\FeatureManagement\Requirements;
 
 use MediaWiki\Config\HashConfig;
 use MediaWiki\Request\WebRequest;
-use MediaWiki\Skins\Continuum\Constants;
-use MediaWiki\Skins\Continuum\FeatureManagement\Requirements\OverridableConfigRequirement;
+use ContinuumUniverses\Skins\Continuum\Constants;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements\OverridableConfigRequirement;
 use MediaWiki\User\UserIdentity;
 
 /**
  * @group Continuum
  * @group FeatureManagement
- * @coversDefaultClass \MediaWiki\Skins\Continuum\FeatureManagement\Requirements\OverridableConfigRequirement
+ * @coversDefaultClass \ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements\OverridableConfigRequirement
  */
 class OverridableConfigRequirementTest extends \MediaWikiUnitTestCase {
 

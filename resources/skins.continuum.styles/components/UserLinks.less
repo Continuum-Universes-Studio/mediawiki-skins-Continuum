@@ -112,7 +112,7 @@
  * Logged-in user-page link in personal (overflow) menu.
  */
 #pt-userpage-2 {
-	max-width: unit( 155 / @font-size-browser / @font-size-small, em );
+	max-width: unit( (155 / @font-size-browser / @font-size-small), em );
 	overflow: hidden;
 	text-overflow: ellipsis;
 	background: @bg-button !important;
@@ -132,6 +132,6 @@
 	// T287522#7295558: Increase the max-width of the username when viewport
 	// allows for it.
 	@media ( min-width: @min-width-breakpoint-desktop-wide ) {
-		max-width: unit( 200 / @font-size-browser / @font-size-small, em );
+		max-width: unit( (200 / @font-size-browser / @font-size-small), em );
 	}
 }

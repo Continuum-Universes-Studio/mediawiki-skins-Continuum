@@ -20,15 +20,15 @@
  * @since 1.35
  */
 
-namespace MediaWiki\Skins\Continuum\Tests\Unit\FeatureManagement\Requirements;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Unit\FeatureManagement\Requirements;
 
 use MediaWiki\Config\HashConfig;
-use MediaWiki\Skins\Continuum\FeatureManagement\Requirements\DynamicConfigRequirement;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements\DynamicConfigRequirement;
 
 /**
  * @group Continuum
  * @group FeatureManagement
- * @coversDefaultClass \MediaWiki\Skins\Continuum\FeatureManagement\Requirements\DynamicConfigRequirement
+ * @coversDefaultClass \ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements\DynamicConfigRequirement
  */
 class DynamicConfigRequirementTest extends \MediaWikiUnitTestCase {
 

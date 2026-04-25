@@ -20,16 +20,16 @@
  * @since 1.42
  */
 
-namespace MediaWiki\Skins\Continuum\Tests\Unit\FeatureManagement\Requirements;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Unit\FeatureManagement\Requirements;
 
-use MediaWiki\Skins\Continuum\FeatureManagement\Requirements\LoggedInRequirement;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements\LoggedInRequirement;
 use MediaWiki\User\UserIdentity;
 use PHPUnit\Framework\TestCase;
 
 /**
  * @group Continuum
  * @group FeatureManagement
- * @coversDefaultClass \MediaWiki\Skins\Continuum\FeatureManagement\Requirements\LoggedInRequirement
+ * @coversDefaultClass \ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements\LoggedInRequirement
  */
 class LoggedInRequirementTest extends TestCase {
 

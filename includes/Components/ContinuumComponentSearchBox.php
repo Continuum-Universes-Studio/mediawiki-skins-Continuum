@@ -1,5 +1,5 @@
 <?php
-namespace MediaWiki\Skins\Continuum\Components;
+namespace ContinuumUniverses\Skins\Continuum\Components;
 
 use MediaWiki\Config\Config;
 use MediaWiki\Linker\Linker;
@@ -30,21 +30,35 @@ class ContinuumComponentSearchBox implements ContinuumComponent {
 	private const SEARCH_SHOW_THUMBNAIL_CLASS = 'continuum-search-box-show-thumbnail';
 	private const SEARCH_AUTO_EXPAND_WIDTH_CLASS = 'continuum-search-box-auto-expand-width';
 
-	/**
-	 * @return Config
-	 */
 	private function getConfig(): Config {
 		return $this->config;
 	}
 
 	/**
+	 * Returns the effective Typeahead search options for Continuum.
+	 *
+	 * ContinuumTypeahead is the 1.45+ config path. ContinuumWvuiSearchOptions is retained as a
+	 * backward-compatible fallback for older LocalSettings overrides.
+	 *
+	 * @return array<string,mixed>
+	 */
+	private function getTypeaheadOptions(): array {
+		$typeahead = $this->getConfig()->get( 'ContinuumTypeahead' );
+		$legacyOptions = $this->getConfig()->get( 'ContinuumWvuiSearchOptions' );
+
+		return array_merge(
+			$legacyOptions,
+			$typeahead['options'] ?? []
+		);
+	}
+
+	/**
 	 * Returns `true` if Vue search is enabled to show thumbnails and `false` otherwise.
 	 * Note this is only relevant for Vue search experience (not legacy search).
-	 *
-	 * @return bool
 	 */
 	private function doesSearchHaveThumbnails(): bool {
-		return $this->getConfig()->get( 'ContinuumWvuiSearchOptions' )['showThumbnail'];
+		$searchOptions = $this->getTypeaheadOptions();
+		return (bool)( $searchOptions['showThumbnail'] ?? false );
 	}
 
 	/**

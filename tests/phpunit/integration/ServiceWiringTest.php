@@ -5,7 +5,7 @@
  * used to test the ServiceWiring.php file.
  */
 
-namespace MediaWiki\Skins\Continuum\Tests\Integration;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Integration;
 
 use MediaWikiIntegrationTestCase;
 

@@ -19,16 +19,16 @@
  * @since 1.42
  */
 
-namespace MediaWiki\Skins\Continuum\Tests\Unit\Components;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Unit\Components;
 
-use MediaWiki\Skins\Continuum\Components\ContinuumComponent;
-use MediaWiki\Skins\Continuum\Components\ContinuumComponentMenu;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponent;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentMenu;
 use MediaWikiUnitTestCase;
 
 /**
  * @group Continuum
  * @group Components
- * @coversDefaultClass \MediaWiki\Skins\Continuum\Components\ContinuumComponentMenu
+ * @coversDefaultClass \ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentMenu
  */
 class ContinuumComponentMenuTest extends MediaWikiUnitTestCase {
 

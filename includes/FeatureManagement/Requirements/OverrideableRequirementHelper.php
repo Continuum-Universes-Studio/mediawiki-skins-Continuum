@@ -18,7 +18,7 @@
  * @file
  */
 
-namespace MediaWiki\Skins\Continuum\FeatureManagement\Requirements;
+namespace ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements;
 
 use MediaWiki\Request\WebRequest;
 
@@ -29,7 +29,7 @@ use MediaWiki\Request\WebRequest;
  * NOTE: This API hasn't settled. It may change at any time without warning. Please don't bind to
  * it unless you absolutely need to
  *
- * @package MediaWiki\Skins\Continuum\FeatureManagement\Requirements
+ * @package ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements
  */
 class OverrideableRequirementHelper {
 	private WebRequest $request;

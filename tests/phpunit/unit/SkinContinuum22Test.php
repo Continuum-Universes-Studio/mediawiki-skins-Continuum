@@ -1,11 +1,11 @@
 <?php
-namespace MediaWiki\Skins\Continuum\Tests\Unit;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Unit;
 
-use MediaWiki\Skins\Continuum\SkinContinuum22;
+use ContinuumUniverses\Skins\Continuum\SkinContinuum22;
 use ReflectionMethod;
 
 /**
- * @coversDefaultClass \MediaWiki\Skins\Continuum\SkinContinuum22
+ * @coversDefaultClass \ContinuumUniverses\Skins\Continuum\SkinContinuum22
  * @group Continuum
  * @group Skins
  */

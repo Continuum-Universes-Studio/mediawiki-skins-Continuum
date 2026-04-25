@@ -20,7 +20,7 @@
  * @since 1.35
  */
 
-namespace MediaWiki\Skins\Continuum\FeatureManagement;
+namespace ContinuumUniverses\Skins\Continuum\FeatureManagement;
 
 /**
  * NOTE: This API hasn't settled. It may change at any time without warning. Please don't bind to
@@ -28,7 +28,7 @@ namespace MediaWiki\Skins\Continuum\FeatureManagement;
  *
  * @unstable
  *
- * @package MediaWiki\Skins\Continuum\FeatureManagement
+ * @package ContinuumUniverses\Skins\Continuum\FeatureManagement
  * @internal
  */
 interface Requirement {

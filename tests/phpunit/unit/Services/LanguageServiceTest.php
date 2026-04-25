@@ -19,15 +19,15 @@
  * $since 1.42
  */
 
-namespace MediaWiki\Skins\Continuum\Tests\Unit\Services;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Unit\Services;
 
-use MediaWiki\Skins\Continuum\Services\LanguageService;
+use ContinuumUniverses\Skins\Continuum\Services\LanguageService;
 use MediaWikiUnitTestCase;
 
 /**
  * @group Continuum
  * @group Services
- * @covers  \MediaWiki\Skins\Continuum\Services\LanguageService
+ * @covers  \ContinuumUniverses\Skins\Continuum\Services\LanguageService
  */
 class LanguageServiceTest extends MediaWikiUnitTestCase {
 

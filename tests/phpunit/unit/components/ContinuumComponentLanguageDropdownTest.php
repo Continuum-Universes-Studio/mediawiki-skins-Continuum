@@ -19,16 +19,16 @@
  * @since 1.42
  */
 
-namespace MediaWiki\Skins\Continuum\Tests\Unit\Components;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Unit\Components;
 
-use MediaWiki\Skins\Continuum\Components\ContinuumComponentLanguageDropdown;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentLanguageDropdown;
 use MediaWiki\Title\Title;
 use MediaWikiUnitTestCase;
 
 /**
  * @group Continuum
  * @group Components
- * @coversDefaultClass \MediaWiki\Skins\Continuum\Components\ContinuumComponentLanguageDropdown
+ * @coversDefaultClass \ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentLanguageDropdown
  */
 class ContinuumComponentLanguageDropdownTest extends MediaWikiUnitTestCase {
 

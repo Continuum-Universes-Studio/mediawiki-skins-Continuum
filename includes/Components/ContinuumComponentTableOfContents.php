@@ -1,9 +1,9 @@
 <?php
-namespace MediaWiki\Skins\Continuum\Components;
+namespace ContinuumUniverses\Skins\Continuum\Components;
 
 use MediaWiki\Config\Config;
-use MediaWiki\Skins\Continuum\Constants;
-use MediaWiki\Skins\Continuum\FeatureManagement\FeatureManager;
+use ContinuumUniverses\Skins\Continuum\Constants;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\FeatureManager;
 use MessageLocalizer;
 
 /**

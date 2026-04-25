@@ -19,15 +19,15 @@
  * @since 1.42
  */
 
-namespace MediaWiki\Skins\Continuum\Tests\Unit\Components;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Unit\Components;
 
-use MediaWiki\Skins\Continuum\Components\ContinuumComponentDropdown;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentDropdown;
 use MediaWikiUnitTestCase;
 
 /**
  * @group Continuum
  * @group Components
- * @coversDefaultClass \MediaWiki\Skins\Continuum\Components\ContinuumComponentDropdown
+ * @coversDefaultClass \ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentDropdown
  */
 class ContinuumComponentDropdownTest extends MediaWikiUnitTestCase {
 

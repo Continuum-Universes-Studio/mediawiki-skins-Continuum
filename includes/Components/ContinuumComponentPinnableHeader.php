@@ -1,5 +1,5 @@
 <?php
-namespace MediaWiki\Skins\Continuum\Components;
+namespace ContinuumUniverses\Skins\Continuum\Components;
 
 use MessageLocalizer;
 

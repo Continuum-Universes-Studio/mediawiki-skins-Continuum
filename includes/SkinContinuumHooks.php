@@ -1,5 +1,5 @@
 <?php
-namespace MediaWiki\Skins\Continuum;
+namespace ContinuumUniverses\Skins\Continuum;
 
 class SkinContinuumHooks {
     /**
@@ -15,7 +15,7 @@ class SkinContinuumHooks {
         $GLOBALS['wgFooterIcons']['poweredby'] ??= [];
 
         // Add/override badges (edit paths as needed)
-        $GLOBALS['wgFooterIcons']['poweredby']['continuum'] = [
+        $GLOBALS['wgFooterIcons']['poweredby']['continuum-universes'] = [
             'src' => "$base/poweredby-continuum.svg",
             'url' => 'https://continuum-universes.com/',
             'alt' => 'Powered by Continuum',
@@ -26,11 +26,10 @@ class SkinContinuumHooks {
             'alt' => 'Powered by Google Fonts',
         ];
 
-        // If you want to replace the default MediaWiki badge with your SVG:
-        // $GLOBALS['wgFooterIcons']['poweredby']['mediawiki'] = [
-        //     'src' => "$base/poweredby-mediawiki.svg",
-        //     'url' => 'https://www.mediawiki.org/',
-        //     'alt' => 'Powered by MediaWiki',
-        // ];
+        $GLOBALS['wgFooterIcons']['poweredby']['mediawiki'] = [
+             'src' => "$base/poweredby-mediawiki.svg",
+             'url' => 'https://www.mediawiki.org/',
+             'alt' => 'Powered by MediaWiki',
+        ];
     }
 }

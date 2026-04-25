@@ -104,7 +104,7 @@ input[type="username"],
 input[type="password"] {
     background-color: @bg-alt;
 	background: @bg-alt !important;
-    color: @text-base;
+    color: @text-subtle !important;
     border: 1px solid @accent-alt !important;
     border-radius: 8px;
     padding: 12px;
@@ -129,8 +129,8 @@ input[type="checkbox"] {
 	}
 }
 label {
-	background-color: @bg-button !important;
-	background: @bg-button !important;
+	background-color: @accent-secondary !important;
+	background: @accent-secondary !important;
 }
 label#continuum-page-titlebar-toc-label {
 	border-radius: 8px;
@@ -311,4 +311,11 @@ textarea#wpBio {
 	border: 1px solid @accent-alt !important;
 	border-radius: 8px;
 	background-color: @bg-light !important;
+}
+/* ===== Placeholder text color (the "Search..." hint) ===== */
+#searchInput::placeholder,
+.cdx-text-input__input[type="search"]::placeholder,
+.continuum-search-box-input::placeholder {
+  color: @text-subtle !important; /* <-- your desired placeholder color */
+  opacity: 1; /* Firefox sometimes needs this */
 }

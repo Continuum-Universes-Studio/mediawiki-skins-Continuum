@@ -2,18 +2,19 @@
 body.skin-continuum.theme-balorian {
   /* Core palette */
   --bg-panel:       #1d0e2c;
-  --bg-main:        #2d2c5e;
-  --bg-alt:         #3d4b91;
-  --bg-interactive: #4e69c3;
-  --bg-light:       #5e87f5;
-  --bg-button:      #5e87f5;
+  --bg-main:        #1a1a3b;
+  --bg-alt:         #161f4b;
+  --bg-interactive: #142b78;
+  --bg-light:       #163382;
+  --bg-button:      #203776;
+  --bg-body:        var(--bg-panel);
 
   /* Type */
   --text-base:      #f5f7ff;
   --text-subtle:    #cbd6ff;
   --text-alt:       #e1e7ff;
-  --text-accent:    #5e87f5;
-  --text-error:     #5e87f5;
+  --text-accent:    #5e9df5;
+  --text-error:     #f55ea5;
   --text-hover:     #ffffff;
 
   /* Accents */
@@ -21,8 +22,8 @@ body.skin-continuum.theme-balorian {
   --accent-secondary: #4e69c3;
   --accent-hover:     #6f98ff;
   --accent-active:    #4e69c3;
-  --accent-alt:       #3d4b91;
-  --accent-danger:    #5e87f5;
+  --accent-alt:       #0c2ac3;
+  --accent-danger:    #c013d3;
   --accent-gold:      #5e87f5;
   --accent-light:     #e1e7ff;
 
@@ -32,7 +33,7 @@ body.skin-continuum.theme-balorian {
   --link-active:    var(--accent-active);
   --link-alt:       var(--accent-alt);
   --link-visited:   #c5b2ff;
-
+  --link-new:       #df44ca;
   /* Status */
   --status-success: #4e69c3;
   --status-warning: #5e87f5;
@@ -84,7 +85,7 @@ body.skin-continuum.theme-balorian {
   --code-glow:             rgba(94, 135, 245, 0.2);
 
   --cursor-color:  var(--accent-primary);
-  --icon-color:    var(--text-base);
+  --icon-color:   #7d69c0;
 
   /* mermaid colors */
   --cu-surface: var(--bg-panel);
@@ -94,6 +95,8 @@ body.skin-continuum.theme-balorian {
   --cu-primary-700: var(--accent-primary);
   --cu-accent: var(--accent-secondary);
   --cu-border: var(--border);
+
+  --color-progressive: #952ec1 !important;
 }
 
 .theme-balorian .mw-ui-icon,

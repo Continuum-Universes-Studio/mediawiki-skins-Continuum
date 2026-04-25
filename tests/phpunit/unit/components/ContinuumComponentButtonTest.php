@@ -20,15 +20,15 @@
  * @since 1.42
  */
 
-namespace MediaWiki\Skins\Continuum\Tests\Unit\Components;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Unit\Components;
 
-use MediaWiki\Skins\Continuum\Components\ContinuumComponentButton;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentButton;
 use MediaWikiUnitTestCase;
 
 /**
  * @group Continuum
  * @group Components
- * @coversDefaultClass \MediaWiki\Skins\Continuum\Components\ContinuumComponentButton
+ * @coversDefaultClass \ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentButton
  */
 class ContinuumComponentButtonTest extends MediaWikiUnitTestCase {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace MediaWiki\Skins\Continuum\Hooks;
+namespace ContinuumUniverses\Skins\Continuum\Hooks;
 
 use MediaWiki\HookContainer\HookContainer;
 

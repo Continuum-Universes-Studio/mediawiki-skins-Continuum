@@ -2,10 +2,23 @@
 // ===== Table of Contents (TOC) Styles for Continuum Skin =====
 
 .continuum-toc {
+    background: @bg-main;
+    border-radius: 8px;
+    border: 1px solid @accent-alt;
+    ul .continuum-toc-list-item button.cdx-button:enabled.cdx-button--weight-quiet {
+        margin-left: -16px;
+        background: none !important;
+        @supports (-webkit-mask-image:none) or (mask-image:none) {
+            .mw-ui-icon-wikimedia-expand {
+                background-color: @text-base !important;
+            }
+
+        }
+        
+    }
     .continuum-pinnable-header {
         margin-left: @toc-list-item-padding-start;
     }
-
     .continuum-pinnable-header-label {
         font-size: @font-size-reset; // <h2> fix
     }
@@ -56,6 +69,9 @@
     .continuum-toc-list {
         margin: 0;
         list-style: none;
+        background: @bg-main;
+        border-radius: 8px;
+        border: 1px sold @accent-alt;
     }
 
     .continuum-toc-list-item {

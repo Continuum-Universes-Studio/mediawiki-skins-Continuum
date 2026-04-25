@@ -19,17 +19,17 @@
  * @since 1.42
  */
 
-namespace MediaWiki\Skins\Continuum\Tests\Unit\Components;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Unit\Components;
 
-use MediaWiki\Skins\Continuum\Components\ContinuumComponentAppearance;
-use MediaWiki\Skins\Continuum\FeatureManagement\FeatureManager;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentAppearance;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\FeatureManager;
 use MediaWikiUnitTestCase;
 use MessageLocalizer;
 
 /**
  * @group Continuum
  * @group Components
- * @coversDefaultClass \MediaWiki\Skins\Continuum\Components\ContinuumComponentAppearance
+ * @coversDefaultClass \ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentAppearance
  */
 class ContinuumComponentAppearanceTest extends MediaWikiUnitTestCase {
 

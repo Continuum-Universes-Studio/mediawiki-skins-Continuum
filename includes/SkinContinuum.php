@@ -1,27 +1,27 @@
 <?php
 
-namespace MediaWiki\Skins\Continuum;
+namespace ContinuumUniverses\Skins\Continuum;
 
 use MediaWiki\Html\Html;
 use MediaWiki\Languages\LanguageConverterFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Registration\ExtensionRegistry;
-use MediaWiki\Skins\Continuum\Components\ContinuumComponentAppearance;
-use MediaWiki\Skins\Continuum\Components\ContinuumComponentButton;
-use MediaWiki\Skins\Continuum\Components\ContinuumComponentDropdown;
-use MediaWiki\Skins\Continuum\Components\ContinuumComponentLanguageDropdown;
-use MediaWiki\Skins\Continuum\Components\ContinuumComponentMainMenu;
-use MediaWiki\Skins\Continuum\Components\ContinuumComponentPageTools;
-use MediaWiki\Skins\Continuum\Components\ContinuumComponentPinnableContainer;
-use MediaWiki\Skins\Continuum\Components\ContinuumComponentSearchBox;
-use MediaWiki\Skins\Continuum\Components\ContinuumComponentStickyHeader;
-use MediaWiki\Skins\Continuum\Components\ContinuumComponentTableOfContents;
-use MediaWiki\Skins\Continuum\Components\ContinuumComponentUserLinks;
-use MediaWiki\Skins\Continuum\Components\ContinuumComponentVariants;
-use MediaWiki\Skins\Continuum\FeatureManagement\FeatureManager;
-use MediaWiki\Skins\Continuum\FeatureManagement\FeatureManagerFactory;
-use MediaWiki\Skins\Continuum\Hooks;
-use MediaWiki\Skins\Continuum\Constants;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentAppearance;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentButton;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentDropdown;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentLanguageDropdown;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentMainMenu;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentPageTools;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentPinnableContainer;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentSearchBox;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentStickyHeader;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentTableOfContents;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentUserLinks;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentVariants;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\FeatureManager;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\FeatureManagerFactory;
+use ContinuumUniverses\Skins\Continuum\Hooks;
+use ContinuumUniverses\Skins\Continuum\Constants;
 use RuntimeException;
 use SkinMustache;
 use SkinTemplate;

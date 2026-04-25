@@ -1,0 +1,12 @@
+{
+	"@doc": "This file describes the configuration for Continuum Search, including empty search recommendations.",
+	"ContinuumTypeahead": {
+		"apiUrl": "",
+		"recommendationApiUrl": "",
+		"options": {
+			"showThumbnail": true,
+			"showDescription": true
+		}
+	},
+	"ContentNamespaces": [ 0 ]
+}

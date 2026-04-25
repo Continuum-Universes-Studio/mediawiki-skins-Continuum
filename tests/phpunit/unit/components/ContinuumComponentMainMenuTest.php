@@ -19,12 +19,12 @@
  * @since 1.42
  */
 
-namespace MediaWiki\Skins\Continuum\Tests\Unit\Components;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Unit\Components;
 
-use MediaWiki\Skins\Continuum\Components\ContinuumComponent;
-use MediaWiki\Skins\Continuum\Components\ContinuumComponentMainMenu;
-use MediaWiki\Skins\Continuum\Constants;
-use MediaWiki\Skins\Continuum\FeatureManagement\FeatureManager;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponent;
+use ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentMainMenu;
+use ContinuumUniverses\Skins\Continuum\Constants;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\FeatureManager;
 use MediaWiki\User\UserIdentity;
 use MediaWikiUnitTestCase;
 use MessageLocalizer;
@@ -33,7 +33,7 @@ use Skin;
 /**
  * @group Continuum
  * @group Components
- * @coversDefaultClass \MediaWiki\Skins\Continuum\Components\ContinuumComponentMainMenu
+ * @coversDefaultClass \ContinuumUniverses\Skins\Continuum\Components\ContinuumComponentMainMenu
  */
 class ContinuumComponentMainMenuTest extends MediaWikiUnitTestCase {
 

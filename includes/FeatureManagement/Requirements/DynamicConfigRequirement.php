@@ -20,10 +20,10 @@
  * @since 1.35
  */
 
-namespace MediaWiki\Skins\Continuum\FeatureManagement\Requirements;
+namespace ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements;
 
 use MediaWiki\Config\Config;
-use MediaWiki\Skins\Continuum\FeatureManagement\Requirement;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirement;
 
 /**
  * Some application state changes throughout the lifetime of the application, e.g. `wgSitename` or
@@ -62,7 +62,7 @@ use MediaWiki\Skins\Continuum\FeatureManagement\Requirement;
  *
  * @unstable
  *
- * @package MediaWiki\Skins\Continuum\FeatureManagement\Requirements
+ * @package ContinuumUniverses\Skins\Continuum\FeatureManagement\Requirements
  * @internal
  */
 final class DynamicConfigRequirement implements Requirement {

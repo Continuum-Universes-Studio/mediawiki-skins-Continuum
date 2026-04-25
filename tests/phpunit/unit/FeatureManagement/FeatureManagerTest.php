@@ -19,16 +19,16 @@
  * @since 1.35
  */
 
-namespace MediaWiki\Skins\Continuum\Tests\Unit\FeatureManagement;
+namespace ContinuumUniverses\Skins\Continuum\Tests\Unit\FeatureManagement;
 
 use MediaWiki\Context\RequestContext;
-use MediaWiki\Skins\Continuum\FeatureManagement\FeatureManager;
+use ContinuumUniverses\Skins\Continuum\FeatureManagement\FeatureManager;
 use MediaWiki\User\Options\UserOptionsLookup;
 
 /**
  * @group Continuum
  * @group FeatureManagement
- * @coversDefaultClass \MediaWiki\Skins\Continuum\FeatureManagement\FeatureManager
+ * @coversDefaultClass \ContinuumUniverses\Skins\Continuum\FeatureManagement\FeatureManager
  */
 class FeatureManagerTest extends \MediaWikiUnitTestCase {
 
