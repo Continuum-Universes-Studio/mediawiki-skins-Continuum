@@ -1,0 +1,50 @@
+/* === cu-ambox: article message banners — styled to match BannerBox === */
+.cu-ambox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid var(--ambox-accent, #888);
+    border-radius: 4px;
+    background: var(--bg-light);
+    margin: 10px 0;
+    padding: 8px 12px;
+    overflow: hidden;
+}
+.cu-ambox__image {
+    flex: 0 0 auto;
+}
+.cu-ambox__image img {
+    display: block;
+}
+.cu-ambox__emblem {
+    flex: 0 0 auto;
+    color: var(--ambox-accent, #888);
+    font-size: 1.4em;
+    line-height: 1;
+}
+.cu-ambox__body {
+    flex: 1 1 auto;
+}
+.cu-ambox__title {
+    font-weight: bold;
+    color: var(--ambox-accent, #888);
+    margin-bottom: 2px;
+}
+.cu-ambox__text {
+    font-size: 0.95em;
+    line-height: 1.45;
+}
+
+/* Type accents */
+.cu-ambox--notice     { --ambox-accent: #888; }     /* neutral */
+.cu-ambox--canon      { --ambox-accent: #3f8a4d; }  /* green   */
+.cu-ambox--draft      { --ambox-accent: #c1a240; }  /* gold    */
+.cu-ambox--non-canon  { --ambox-accent: #7d7d7d; }  /* grey    */
+.cu-ambox--spoiler    { --ambox-accent: #b03a3a; }  /* red     */
+.cu-ambox--cleanup    { --ambox-accent: #d07a2e; }  /* orange  */
+.cu-ambox--style      { --ambox-accent: #d07a2e; }
+.cu-ambox--content    { --ambox-accent: #c14e4e; }
+.cu-ambox--move       { --ambox-accent: #5a7fb5; }  /* blue    */
+.cu-ambox--protection { --ambox-accent: #8a6fb0; }  /* purple  */
+.cu-ambox--delete     { --ambox-accent: #b03a3a; }
+.cu-ambox--speedy     { --ambox-accent: #c92a2a; }  /* deep red */
